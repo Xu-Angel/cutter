@@ -316,6 +316,7 @@ ul.list-content li {
 .seckill {
   position: relative;
   top:420px;
+ 
 }
 .seckill .seckill-head {
   position: relative;
@@ -344,32 +345,96 @@ ul.list-content li {
     border: 1px solid #ddd;
     cursor: pointer;
 }
-.seckill .seckill-content  div{
-  display: inline-block;
+.seckill-content {
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+.seckill .seckill-content>div{
+  float: left;
 }
 .seckill .seckill-content .seckill-one {
-  padding: 20px;
+  position: relative;
+    padding: 20px;
     border: 5px solid #ffd5bc;
     width: 450px;
     height: 250px;
     margin-left: 0;
 }
-.seckill .seckill-content .seckill-two,
-.seckill .seckill-content .seckill-three
+.seckill .seckill-content .seckill-two
 {
   width: 333px;
     height: 298px;
     margin-left: 10px;
+    background: #fff;
+    border:1px solid #eee;
 }
-.seckill-content .seckill-one .con {
+.seckill-content .seckill-one .cont {
   font-size: 20px;
   color:#999;
   margin-bottom: 5px;
 }
-.seckill-content .seckill0-one .cut-down {
-  widows: 260px;
+.seckill-content .seckill-one .cut-down {
+  width: 260px;
 }
-.seckill-content .seckill0-one .goods-title {
+.seckill-content .cut-down .tag {
+  font-size: 16px;
+  color:#999;
+}
+.seckill-content  .time {
+  line-height: 30px
+}
+
+.seckill-content  .time .t {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #424242;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 4px;
+  margin-right: 2px
+}
+
+.seckill-content  .time .t:after {
+  content: "";
+  width: 30px;
+  height: 0;
+  border-bottom: 1px solid #424242;
+  position: absolute;
+  top: 15px;
+  left: 0
+}
+
+.seckill-content  .time .t.s {
+  background: #db1b1b
+}
+
+.seckill-content  .time .t.s:after {
+  border-bottom: 1px solid #db1b1b
+}
+
+.seckill-content  .time.small {
+  line-height: 24px
+}
+
+.seckill-content  .time.small .t {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  border-radius: 3px;
+  margin-right: 3px
+}
+
+.seckill-content  .time.small .t:after {
+  top: 12px;
+  width: 24px
+}
+
+.seckill-content .seckill-one .goods-title {
   width: 240px;
   height: 40px;
   line-height: 20px;
@@ -377,26 +442,209 @@ ul.list-content li {
   font-weight: 700;
   margin-top: 15px;
 }
-.seckill-content .seckill0-one .price {
+.seckill-content .seckill-one .price {
   color:#db1b1b;
   margin:8px 0;
 }
-.seckill-content .seckill0-one .stadnard {
+.seckill-content .seckill-one .price {
+  font-size: 14px;
+  font-weight: 700;
+}
+.seckill-content  .seckill-one .price span.cri {
+  font-size: 24px;
+}
+.seckill-content .seckill-one .ori {
+ font-weight: 400;
+ color:#999;
+ text-decoration: line-through;
+ font-size: 12px;
+}
+.seckill-content .seckill-one .standard {
   position: relative;
   height: 20px;
 }
-.seckill-content .seckill0-one .stadnard span{
+.seckill-content .seckill-one .standard span{
   color:#3287f1;
-  border-color:#44a0f9;
   padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid #44a0f9;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #fff;
+}
+.seckill-content  .bar {
+  padding-left:0;
+  margin-top:8px;
+  color:#666;
+}
+.seckill-content  .bar p{
+  display: inline-block;
+  background:#ccc;
+  margin-left:10px;
+  width:100px;
+  height:10px;
+}
+/* TODO:百分比进度条 */
+.seckill-content  .bar p span {
+  color:#666;
+  background:#ffd800;
+  display:block;
+  height:10px;
+  width: 10px;
+}
+.seckill-content .seckill-one .buy-now {
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin-top: 11px;
+  text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+    color: #fff;
+    background:#4496f9;
+    font-weight: 700;
+}
+.seckill-content .seckill-one .img {
+  position: absolute;
+  width:180px;
+  height:180px;
+  top:55px;
+  right:20px;
+}
+.seckill-content .seckill-one .img a {
+  display: block;position: relative;
+}
+.seckill-one .img a img {
+  width: 100%;
+  height:100%;
+}
+.seckill-one .img a>div {
+  position: absolute;
+  top:30px;
+  left:30px;
+  width: 120px;
+  height: 120px;
+  border-radius:50%;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 120px;
+  background: #000;
+  text-align: center;
+  opacity: .3;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+}
+/* TODO:seckill-two */
+.seckill-two {
+
+}
+.seckill-two .cut-down  {
+  float: right;
+  padding: 3px 10px 3px 20px;
+  margin: 5px 2px 5px 0;
+  background:#eee;
+  border-radius: 15px 0 0 15px;
+  -webkit-border-radius: 15px 0 0 15px;
+  -moz-border-radius: 15px 0 0 15px;
+  -ms-border-radius: 15px 0 0 15px;
+  -o-border-radius: 15px 0 0 15px;
+}
+.seckill-two .cut-down .tag {
+  font-size: 12px;
+}
+.seckill-content .seckill-two .img {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin:40px auto 0 ;
+  text-align: center;
+}
+.seckill-two .img  img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  right: 0;
+}
+.seckill-content .seckill-two .title {
+  display: block;
+  font-size: 14px;
+  line-height: 32px;
+  text-align: center;
+  padding: 3px 20px;
+}
+.seckill-content .bottom {
+  position: relative;
+  height: 80px;
+  margin: 1px;
+  bottom: 2px;
+  background: #eee;
+}
+.seckill-content  .bottom  .price {
+  position: relative;
+  color:#db1b1b;
+  padding:6px 20px 4px;
+  width: 225px;
+}
+.seckill-content  .bottom  .price span {
+  font-size: 12px;
+  font-weight: 700;
+}
+.seckill-content  .bottom  .price .ori {
+  font-weight: 400;
+  color:#999;
+  text-decoration: line-through;
+  font-size: 12px;
+}
+.seckill-content .seckill-two .standard {
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+.seckill-content .seckill-two .standard span {
+  display: inline-block;
+  padding:0 4px;
   font-size: 14px;
   line-height: 18px;
   border: 1px solid #999;
   margin-right: 10px;
   cursor: pointer;
-  background-color: #fff;
+  background:#fff;
 }
-.seckill-content .seckill0-one .bar {
-  padding-left:0;
-  margin-top:8px;
+.seckill-content .seckill-two .standard span.active {
+  color:#3287f1;
+  border-color:#44a0f9;
+}
+.seckill-content .btn {
+  position: absolute;
+  right: 1px;
+  top:0;
+}
+.seckill-content .btn div {
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  right:75px;
+  width:0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-bottom:40px solid #ff7422;
+  border-top:40px solid transparent;
+  border-right:30px solid #ff7422;
+
+}
+.seckill-content .btn a {
+  display: inline-block;
+  height:80px;
+  width:65px;
+  text-align: right;
+  padding-right: 10px;
+  margin-top:0;
+  line-height: 80px;
+  font-size: 16px;
+  color:#fff;
+  font-weight: 700;
+  background:#ff7422;
 }

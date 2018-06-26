@@ -47,10 +47,10 @@ header{
 }
 .search{
   position: absolute;
-  width: 550px;
-  height:33px;
   top:21px;
   left: 348px;
+  width: 550px;
+  height:33px;
   border:2px solid #3287f1;
 
 }
@@ -65,10 +65,10 @@ header{
 }
 header .cart {
   position: absolute;
+  top:32px;
+  right: 0;
   width: 148px;
   height: 36px;
-  right: 0;
-  top:32px;
   color:#aaa;
 }
 .icon-cart {
@@ -101,10 +101,10 @@ header .cart {
   color: #aaa;
 }
 .cart .num {
+    display: inline-block;
   position: absolute;
     top: 1px;
     left: 108px;
-    display: inline-block;
     padding: 1px 2px;
     font-size: 12px;
     line-height: 12px;
@@ -180,8 +180,8 @@ nav ul li a.active, nav ul li a:hover {
 }
 .nav::after{
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
   border-bottom: 2px solid #287adf;
   content:"";
@@ -225,11 +225,11 @@ ul.list {
 }
 ul.list-content li {
   position: absolute;
+  top: 0;
+  left: 210px;
   /* display: none; */
   width: 980px;
   height: 398px;
-  top: 0;
-  left: 210px;
   background: #fff;
   border-right: 2px solid #287adf;
   border-bottom: 2px solid #287adf;
@@ -246,8 +246,8 @@ ul.list-content li {
 }
 .list-item dl dt {
   position: absolute;
-  left: 0;
   top: 12px;
+  left: 0;
   width: 130px;
   text-align: right;
   font-weight: 700;
@@ -270,11 +270,11 @@ ul.list-content li {
     color: #666;
 }
 .list-goods {
-  width:240px;
   position: absolute;
-  z-index: 200;
     top: 0;
     right: 0;
+  width:240px;
+  z-index: 200;
     padding: 9px;
     height: 380px;
     width: 240px;
@@ -297,14 +297,14 @@ ul.list-content li {
   font-size: 16px;
 }
 .list-goods ul li a.name {
+    position: absolute;
+    top: 12px;
+    left: 22px;
   width: 196px;
     line-height: 20px;
     height: 40px;
     overflow: hidden;
     font-size: 14px;
-    top: 12px;
-    position: absolute;
-    left: 22px;
     color: #7f7f7f;
 }
 .list-goods ul li a.link {
@@ -335,8 +335,8 @@ ul.list-content li {
 }
 .seckill .seckill-head a {
   position: absolute;
-    right: 0;
     top: 20px;
+    right: 0;
     width: 60px;
     height: 22px;
     line-height: 22px;
@@ -381,12 +381,12 @@ ul.list-content li {
   color:#999;
 }
 .seckill-content  .time {
-  line-height: 30px
+  line-height: 30px;
 }
 
 .seckill-content  .time .t {
-  position: relative;
   display: inline-block;
+  position: relative;
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -395,29 +395,29 @@ ul.list-content li {
   color: #fff;
   font-size: 18px;
   border-radius: 4px;
-  margin-right: 2px
+  margin-right: 2px;
 }
 
 .seckill-content  .time .t:after {
+  position: absolute;
+  top: 15px;
+  left: 0;
   content: "";
   width: 30px;
   height: 0;
   border-bottom: 1px solid #424242;
-  position: absolute;
-  top: 15px;
-  left: 0
 }
 
 .seckill-content  .time .t.s {
-  background: #db1b1b
+  background: #db1b1b;
 }
 
 .seckill-content  .time .t.s:after {
-  border-bottom: 1px solid #db1b1b
+  border-bottom: 1px solid #db1b1b;
 }
 
 .seckill-content  .time.small {
-  line-height: 24px
+  line-height: 24px;
 }
 
 .seckill-content  .time.small .t {
@@ -426,12 +426,12 @@ ul.list-content li {
   line-height: 24px;
   font-size: 14px;
   border-radius: 3px;
-  margin-right: 3px
+  margin-right: 3px;
 }
 
 .seckill-content  .time.small .t:after {
   top: 12px;
-  width: 24px
+  width: 24px;
 }
 
 .seckill-content .seckill-one .goods-title {
@@ -487,9 +487,9 @@ ul.list-content li {
 }
 /* TODO:百分比进度条 */
 .seckill-content  .bar p span {
+  display:block;
   color:#666;
   background:#ffd800;
-  display:block;
   height:10px;
   width: 10px;
 }
@@ -507,10 +507,10 @@ ul.list-content li {
 }
 .seckill-content .seckill-one .img {
   position: absolute;
-  width:180px;
-  height:180px;
   top:55px;
   right:20px;
+  width:180px;
+  height:180px;
 }
 .seckill-content .seckill-one .img a {
   display: block;position: relative;
@@ -547,11 +547,11 @@ ul.list-content li {
   padding: 3px 10px 3px 20px;
   margin: 5px 2px 5px 0;
   background:#eee;
-  border-radius: 15px 0 0 15px;
   -webkit-border-radius: 15px 0 0 15px;
   -moz-border-radius: 15px 0 0 15px;
   -ms-border-radius: 15px 0 0 15px;
   -o-border-radius: 15px 0 0 15px;
+  border-radius: 15px 0 0 15px;
 }
 .seckill-two .cut-down .tag {
   font-size: 12px;
@@ -564,10 +564,10 @@ ul.list-content li {
   text-align: center;
 }
 .seckill-two .img  img {
-  width: 100%;
-  height: 100%;
   position: relative;
   right: 0;
+  width: 100%;
+  height: 100%;
 }
 .seckill-content .seckill-two .title {
   display: block;
@@ -578,9 +578,9 @@ ul.list-content li {
 }
 .seckill-content .bottom {
   position: relative;
+  bottom: 2px;
   height: 80px;
   margin: 1px;
-  bottom: 2px;
   background: #eee;
 }
 .seckill-content  .bottom  .price {
@@ -619,14 +619,14 @@ ul.list-content li {
 }
 .seckill-content .btn {
   position: absolute;
-  right: 1px;
   top:0;
+  right: 1px;
 }
 .seckill-content .btn div {
   position: absolute;
-  z-index: 200;
   top: 0;
   right:75px;
+  z-index: 200;
   width:0;
   height: 0;
   border-left: 30px solid transparent;

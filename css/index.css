@@ -661,12 +661,12 @@ ul.list-content li {
     float: left;
     background: url(../images/chemBg1.png);
 }
-.chemical-left h3 {
+.left-wrapper h3 {
   font-size: 32px;
     color: #fff;
     font-weight: 700;
 }
-.chemical-left h3:after{
+.left-wrapper h3:after{
   display: block;
   content: "";
   height: 0;
@@ -674,7 +674,7 @@ ul.list-content li {
   margin:10px 0;
   border-bottom: 2px solid #fff;
 }
-.chemical-left .left-wrapper {
+ .left-wrapper {
   width: 100%;
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -682,7 +682,7 @@ ul.list-content li {
   border: 1px solid hsla(0,0%,100%,.15);
   padding: 10px 0 0 10px;
 }
-.chemical-left ul.chemical-list li {
+.left-wrapper ul.chemical-list li {
   display: inline-block;
   height:20px;
   line-height: 20px;
@@ -693,17 +693,17 @@ ul.list-content li {
   color: #fff;
   cursor: pointer;
 }
-.chemical-left ul.chemical-list li:hover {
+.left-wrapper ul.chemical-list li:hover {
  background:#fff;
  border-color:#fff;
 }
-.chemical-left ul.chemical-list li a{
+.left-wrapper ul.chemical-list li a{
   color: #fff;
 }
-.chemical-left ul.chemical-list li a:hover {
+.left-wrapper ul.chemical-list li a:hover {
   color: #4496f9;
 }
-.chemical-left .left-wrapper>a {
+.left-wrapper>a {
   position: absolute;
   bottom: 30px;
   text-align: center;
@@ -715,12 +715,12 @@ ul.list-content li {
   color: #fff;
   cursor: pointer;
 }
-.chemical-left .left-wrapper>a i {
+.left-wrapper>a i {
   font-size: 20px;
   margin-left: 10px;
   vertical-align: middle;
 }
-.chemical-left .left-wrapper>a:hover {
+.left-wrapper>a:hover {
   border-color: hsla(0,0%,100%,.6);
 }
 .chemical-right ul li{
@@ -799,4 +799,133 @@ ul.list-content li {
 }
 .oil {
   background: url(../images/chemBg3.png)
+}
+/* 资讯行情 */
+.market-info .left {
+  float: left;
+  box-sizing:border-box;
+  padding:20px;
+  width:230px;
+  height: 190px;
+  color:#fff;
+  background: url(../images/module-market.png);
+}
+.market-info .left .left-wrapper {
+  position: relative;
+}
+.market-info .left .left-wrapper a {
+  left: 10px;
+  bottom: 8px;
+}
+.market-info .right {
+  float: left;
+  width: 950px;
+  margin-left: 10px;
+  height: 100%;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 20px;
+  height: 190px;
+}
+.market-info .right ul li{
+  display: inline-block;
+  font-size: 14px;
+  color: #666;
+  margin-right: 30px;
+  line-height: 24px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+.market-info .right ul li:hover {
+  color: #4496f9;
+}
+.market-info .right ul li.active {
+  color: #4496f9;
+  border-bottom-color: #4496f9;
+}
+.right .title>a {
+  float: right;
+  width: 60px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  right:20px;
+  top:20px;
+}
+.right .title>a:hover {
+
+  border-color: #ff7422;
+}
+.right .title>a span,
+.right .title>a i {
+  font-size: 12px;
+  color: #aaa;
+}
+.right .title>a span:hover,
+.right .title>a i:hover {
+  color: #ff7422;
+}
+.right .content .content-list {
+  font-size: 0;
+  margin-top: 20px;
+  display: none;
+}
+.right .content .content-list.active {
+  font-size: 0;
+  margin-top: 20px;
+  display: block;
+}
+.market-info .right .content ul.content-list li{
+  display: inline-block;
+  width: 50%;
+  font-size: 12px;
+  color: #666;
+  height:30px;
+  line-height: 30px;
+  margin-right: 0;
+  border-bottom: 0;
+}
+.market-info .right .content ul.content-list li a {
+  display: inline-block;
+  vertical-align: middle;
+  color: #666;
+  width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+.market-info .right .content ul.content-list li a:hover {
+  color: #4496f9;
+}
+.market-info .right .content ul.content-list li span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #999;
+}
+/* 企业认证 */
+.auth {
+  margin-top: 20px;
+  position: relative;
+}
+.auth a {
+  position: absolute;
+  bottom: 30px;
+  right:30px;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  width: 122px;
+  height: 26px;
+  line-height: 26px;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+.auth a:hover {
+  border-color: hsla(0,0%,100%,.6);
 }

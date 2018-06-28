@@ -1,3 +1,8 @@
+.mt20 {
+margin-top: 20px;
+position: relative;
+
+}
 /* 用户头部 */
 .top{
   height: 35px;
@@ -801,7 +806,7 @@ ul.list-content li {
   background: url(../images/chemBg3.png)
 }
 /* 资讯行情 */
-.market-info .left {
+.left {
   float: left;
   box-sizing:border-box;
   padding:20px;
@@ -810,14 +815,14 @@ ul.list-content li {
   color:#fff;
   background: url(../images/module-market.png);
 }
-.market-info .left .left-wrapper {
+ .left .left-wrapper {
   position: relative;
 }
-.market-info .left .left-wrapper a {
+ .left .left-wrapper a {
   left: 10px;
   bottom: 8px;
 }
-.market-info .right {
+.right {
   float: left;
   width: 950px;
   margin-left: 10px;
@@ -928,4 +933,67 @@ ul.list-content li {
 }
 .auth a:hover {
   border-color: hsla(0,0%,100%,.6);
+}
+/* 交易动态 */
+.pay-dynamic .wrapper .left {
+  height: 190px;
+  background:url(../images//module1.png)
+}
+.pay-dynamic .dynamic-content .heda {
+  line-height: 40px;
+  background: #f5f5f5;
+  overflow: hidden;
+  padding-left: 20px;
+  margin: 0 1px;
+  font-weight: 700;
+}
+.pay-dynamic .dynamic-content .content {
+  margin: 0 0 15px 20px;
+  position: relative;
+}
+.pay-dynamic .right .head>div
+{
+  float: left;
+  height: 40px;
+}
+.pay-dynamic .right .content .content-wrapper span 
+{
+  float: left;
+  height: 30px;
+}
+.pay-dynamic .right .user {
+  text-indent: 65px;
+  width: 185px;
+}
+.pay-dynamic .right .buy-content {
+  width: 395px;
+}
+.pay-dynamic .right .state {
+  width : 170px;
+}
+.pay-dynamic .right .time {
+  width:158px;
+}
+.pay-dynamic .right .content .slider-icon {
+  position: absolute;
+  left: 8px;
+  width: 24px;
+  height: 110px;
+  background: url(../images/sprite2.png) -375px -100px ;
+}
+.pay-dynamic .right .dynamic-content .content .content-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 120px;
+}
+.pay-dynamic .right .dynamic-content .content .content-wrapper .user {
+  margin-left:-20px;
+}
+.pay-dynamic .right .dynamic-content .content .content-wrapper .content {
+  margin: 0;
+  margin-left:-6px;
+}
+.pay-dynamic .right .dynamic-content .content .content-wrapper .state {
+  margin: 0;
+  margin-left:230px;
 }

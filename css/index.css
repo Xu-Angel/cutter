@@ -3,6 +3,18 @@ margin-top: 20px;
 position: relative;
 
 }
+.more {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 60px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
 /* 用户头部 */
 .top{
   height: 35px;
@@ -708,7 +720,9 @@ ul.list-content li {
 .left-wrapper ul.chemical-list li a:hover {
   color: #4496f9;
 }
-.left-wrapper>a {
+.left-wrapper>a,
+.view-more
+ {
   position: absolute;
   bottom: 30px;
   text-align: center;
@@ -725,7 +739,8 @@ ul.list-content li {
   margin-left: 10px;
   vertical-align: middle;
 }
-.left-wrapper>a:hover {
+.left-wrapper>a:hover,
+.view-more:hover {
   border-color: hsla(0,0%,100%,.6);
 }
 .chemical-right ul li{
@@ -831,7 +846,7 @@ ul.list-content li {
   box-sizing: border-box;
   background-color: #fff;
   padding: 20px;
-  height: 190px;
+  /* height: 190px; */
 }
 .market-info .right ul li{
   display: inline-block;
@@ -861,7 +876,8 @@ ul.list-content li {
   right:20px;
   top:20px;
 }
-.right .title>a:hover {
+.right .title>a:hover,
+.more:hover{
 
   border-color: #ff7422;
 }
@@ -997,3 +1013,210 @@ ul.list-content li {
   margin: 0;
   margin-left:230px;
 }
+/* 原料供应 */
+.supply {
+  position: relative;
+  height: 390px;
+}
+.supply .left {
+  background: url(../images/module2.png)
+}
+ .left-bottom {
+  position: absolute;
+  width: 228px;
+  height: 189px;
+  border: 1px solid #eee;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: #fff;
+}
+ .left-bottom img {
+  width:210px;
+  height: 150px;
+  margin-top: 20px;
+}
+ .right .head h4 {
+  font-size: 16px;
+    line-height: 50px;
+    color: #333;
+    text-indent: 20px;
+    border-bottom: 1px solid #eee;
+}
+.supply .right {
+  padding-top:0;
+}
+.supply .more {
+  right: 20px;
+  top: 15px;
+}
+.supply .right ul{
+ overflow: hidden;
+}
+.supply .right ul li {
+  position: relative;
+  float: left;
+  width: 454px;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  border-bottom:1px dashed #ddd;
+}
+.supply .right ul li:nth-child(odd) {
+  padding-right:20px;
+}
+.supply .right ul li:nth-child(even) {
+  padding-left:20px;
+}
+.supply .right ul li:nth-last-child(1),
+.supply .right ul li:nth-last-child(2)
+ {
+border-bottom: 0;}
+.supply .right ul li:nth-child(odd):after {
+  content: "";
+    display: block;
+    right: 0;
+    height: 55px;
+    width: 0;
+    top: 11px;
+    position: absolute;
+    font-size: 0;
+    border-right: 1px dashed #ddd;
+}
+.supply .right ul li .name {
+  position: relative;
+}
+.supply .right ul li .name a {
+  display: inline-block;
+    width: 222px;
+    height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #4496f9;
+}
+.supply .right ul li .name span {
+  display: inline-block;
+    position: absolute;
+    right: 120px;
+    top: 2px;
+    border: 1px solid #69abfa;
+    color: #69abfa;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 5px;
+    border-radius: 2px;
+}
+.supply .right ul li .info {
+  color: #666;
+  margin-top: 18px;
+  overflow: hidden;
+}
+.supply .right ul li .info span {
+  float: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 157px;
+}
+.supply .right ul li .info span.company {
+  text-align:right;
+}
+ a.see-more {
+  display: block;
+    width: 80px;
+    height: 30px;
+    background-color: #ff7244;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+/* 知识交易 */
+.konwledge {
+  position: relative;
+}
+.table .thead {
+  line-height: 40px;
+  background: #f5f5f5;
+  overflow: hidden;
+  padding-left: 38px;
+  margin: 0 1px;
+  font-weight: 700;
+  left: -20px;
+  position: relative;
+  width: 910px;
+}
+.table .tbody {
+  line-height: 59px;
+  /* padding: 0 20px; */
+  overflow: hidden;
+}
+.table .tbody  li {
+  overflow: hidden;
+    color: #666;
+    border-top: 1px dashed #ddd;
+    height: 59px;
+    position: relative;
+}
+.table .tbody  li:first-child{
+  border-top:none;
+}
+.table .thead  span,
+.table .tbody span  {
+  display: inline-block;
+ /* float:left; */
+}
+.table .thead .title {
+  width:220px;
+}
+.table .thead .price {
+  width: 190px;
+  color: #333;
+}
+.table .thead .address {
+width: 190px;
+}
+.table .thead .company {
+  width:200px;
+}
+.table .tbody span.title {
+  width:220px;
+}
+.table .tbody span.price {
+  width:190px;
+  color:#db1b1b;
+}
+.table .tbody span.address {
+  width:190px;
+}
+.table .tbody span.company {
+  width:200px;
+}
+.knowledge .right {
+  padding-bottom:0;
+  padding-top:0;
+}
+/* 商家入驻 */
+.view-more {
+  right: 30px;
+}
+/* 奇化融 */
+.keywa-finance {
+  position: relative;
+}
+.keywa-finance .right {
+  width: 950px;
+  height: 390px;
+  padding: 5px;
+  padding-left: 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} 

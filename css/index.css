@@ -1253,7 +1253,11 @@ width: 190px;
   margin: 0 50px;
   position: relative;
   float: left;
-  width: 100%
+  width: 1062px;
+}
+.news .content ul {
+  width:4684px;
+
 }
 .content .info {
   float: left;
@@ -1276,8 +1280,11 @@ width: 190px;
   bottom: 0;
   margin: auto;
 }
-.new .slider {
+.news .slider {
   height: 175px;
+}
+.news .slider .content{
+  width: 1062px;
 }
 .slider .info>a {
   display: block;
@@ -1288,15 +1295,16 @@ width: 190px;
     color: #000;
     font-size: 23px;
 }
-.slider .info p:nth-child(1) {
+.slider .info p:nth-child(2) {
     line-height: 40px;
     font-size: 13px;
     color: #929292;
 }
-.slider .info p:nth-child(2) {
+.slider .info p:nth-child(3) {
   line-height: 24px;
   font-size: 14px;
   color: #666;
   height: 70px;
   overflow: hidden;
 }
+

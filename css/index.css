@@ -1220,3 +1220,83 @@ width: 190px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 } 
+/* 媒体报道 */
+.news {
+  height: 300px;
+    background: #fff;
+    margin-top: 30px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+.news>h3 {
+  color: #333;
+    font-weight: 700;
+    line-height: 56px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.news .slider {
+  position: relative;
+}
+.news .slider i {
+  position: absolute;
+    font-size: 60px;
+    top: 40px;
+    color: #ccc;
+}
+.news .slider i:nth-last-child(1) {
+  right: 0;
+}
+
+/* 媒体报道 */
+.news .content ul li {
+  margin: 0 50px;
+  position: relative;
+  float: left;
+  width: 100%
+}
+.content .info {
+  float: left;
+  width: 650px;
+}
+.content .img-wrap {
+  float: right;
+  width: 375px;
+  height:175px;
+  position: relative;
+}
+.content .img-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.new .slider {
+  height: 175px;
+}
+.slider .info>a {
+  display: block;
+    max-height: 60px;
+    overflow: hidden;
+    font-weight: 700;
+    line-height: 32px;
+    color: #000;
+    font-size: 23px;
+}
+.slider .info p:nth-child(1) {
+    line-height: 40px;
+    font-size: 13px;
+    color: #929292;
+}
+.slider .info p:nth-child(2) {
+  line-height: 24px;
+  font-size: 14px;
+  color: #666;
+  height: 70px;
+  overflow: hidden;
+}

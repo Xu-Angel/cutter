@@ -154,6 +154,7 @@ header .cart {
 /* 导航列表 */
 .nav {
   position: relative;
+  height: 444px;
 }
 nav .menu {
   position: relative;
@@ -197,11 +198,12 @@ nav ul li a.active, nav ul li a:hover {
 }
 .nav::after{
   position: absolute;
-  bottom: 0;
+  top: 40px;
   left: 0;
   width: 100%;
   border-bottom: 2px solid #287adf;
   content:"";
+  z-index:500;
   
 }
 ul.list {
@@ -332,14 +334,12 @@ ul.list-content li {
 /* 限时抢购 */
 .seckill {
   position: relative;
-  top:420px;
  
 }
 .seckill .seckill-head {
   position: relative;
 }
 .seckill .seckill-head h3 {
-  text-indent: -200px;
   font-size: 32px;
   color: #333;
   line-height: 60px;

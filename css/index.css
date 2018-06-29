@@ -1700,3 +1700,27 @@ footer .auth-img a img {
 .left-floor ul li a  span {
   color: #4496f9;
 }
+/* 用户登录 */
+.login-wrapper {
+  position: absolute;
+  top: 25%;
+  right:25%;
+  width: 250px;
+    height: 320px;
+    background: #fff;
+    opacity: .4;
+}
+.login-wrapper .login-content {
+  width: 234px;
+    height: 304px;
+    background: #fff;
+}
+.login-content .login-head {
+
+}
+.login-content .login-state {
+  
+}
+.login-content .login-bottom {
+  
+}

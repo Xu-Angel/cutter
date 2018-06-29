@@ -212,25 +212,43 @@ ul.list {
   height: 400px;
   background: rgba(27,35,45,.8);
 }
+.list li:hover {
+  background: #fff;
+}
 .list li dl{
   width:170px;
   height: 57px;
   width: 170px;
   overflow: hidden;
   margin: 0 15px;
+  border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 .list dl dt {
-  padding-top: 7px;
   width: 170px;
   height: 20px;
   line-height: 20px;
   font-size: 14px;
   color: #fff;
 }
+.list dl dt a {
+  display:inline-block;
+  width: 170px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+  vertical-align: middle;
+  padding-top:7px;
+}
+
 .list dl dd {
+  margin:5px 0;
   line-height: 22px;
     height: 22px;
-  border-bottom: 1px solid hsla(0,0%,100%,.1);
 
 }
 .list dl dd a {
@@ -239,24 +257,46 @@ ul.list {
     margin-right: 10px;
     color: #fff;
 }
+
+.list li:hover  dl dd a {
+  color:#666;
+}
+.list li:hover  dl dt a {
+  color:#4496f9;
+}
+.list dl dt a:hover {
+  color: #4496f9;
+}
+/* TODO:JS控制 */
+.list dl dd a:hover {
+  color: #4496f9;
+}
 .list-content {
   position: relative;
 }
-ul.list-content li {
+ul.list-content>li {
   position: absolute;
   top: 0;
   left: 210px;
-  /* display: none; */
+  display: none;
   width: 980px;
   height: 398px;
   background: #fff;
   border-right: 2px solid #287adf;
   border-bottom: 2px solid #287adf;
 }
+ul.list-content>li.on{
+  display: block;
+}
+ul.list-content li .list-wrapper {
+  width: 720px;
+  height:400px;
+  overflow-y: scroll;
+}
 .list-item {
   position: relative;
   z-index: 100;
-  width: 720px;
+  width: 700px;
 }
 .list-item dl {
   position: relative;
@@ -273,6 +313,11 @@ ul.list-content li {
   float: left;
   width: 130px;
 }
+.list-item dl dt a {
+color: #4496f9;
+font-size: 14px;
+}
+
 .list-item dl dd {
   padding: 10px 0;
   border-top: 1px solid #eee;
@@ -287,6 +332,10 @@ ul.list-content li {
     line-height: 16px;
     white-space: nowrap;
     color: #666;
+}
+.list-item dl dd a:hover {
+  color: #4496f9;
+
 }
 .list-goods {
   position: absolute;
@@ -325,6 +374,9 @@ ul.list-content li {
     overflow: hidden;
     font-size: 14px;
     color: #7f7f7f;
+}
+.list-goods ul li a.name:hover {
+  color: #4496f9;
 }
 .list-goods ul li a.link {
   position: absolute;
@@ -1142,6 +1194,9 @@ border-bottom: 0;}
 .knowledge {
   position: relative;
 }
+.knowledge .left{
+  background: url(../images/module3.png);
+}
 .table .thead {
   line-height: 40px;
   background: #f5f5f5;
@@ -1210,6 +1265,9 @@ width: 190px;
 /* 奇化融 */
 .keywa-finance {
   position: relative;
+}
+.keywa-finance .left {background: url(../images/module4.png)
+
 }
 .keywa-finance .right {
   width: 950px;
@@ -1572,6 +1630,9 @@ footer .auth-img a img {
   border-radius: 4px 0 4px 4px;
   -webkit-transition: right .3s ease-in-out 0s;
   transition: right .3s ease-in-out 0s;
+  -moz-transition: right .3s ease-in-out 0s;
+  -ms-transition: right .3s ease-in-out 0s;
+  -o-transition: right .3s ease-in-out 0s;
 }
 .right-bar .tab .code-wrapper img {
   width: 100px;
@@ -1595,4 +1656,47 @@ footer .auth-img a img {
 }
 .right-bar .back-top:hover {
   background-color: #3287f1;
+}
+/* 左边楼梯 */
+.left-floor {
+  position: fixed;
+  z-index: 600;
+  font-size: 12px;
+  left:15%;
+  top:50%;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -ms-transition: opacity .5s;
+  -o-transition: opacity .5s;
+}
+.left-floor ul li {
+  color: #4496f9;
+    background-color: #f0f7ff;
+    border: 1px solid #e4f1ff;
+    border-bottom: none;
+}
+.left-floor ul li:hover,
+.left-floor ul li.on
+ {
+  color: #fff;
+  background-color: #4496f9;
+  transition: background-color .1s;
+}
+.left-floor ul li a  span:hover {
+  color:#fff;
+}
+.left-floor ul li a {
+  padding: 5px 7px 6px;
+  overflow: hidden;
+  display: block;
+  width: 24px;
+  line-height: 14px;
+  text-align: center;
+  -webkit-transition: color .1s;
+  transition: color .1s;
+  cursor: pointer;
+}
+.left-floor ul li a  span {
+  color: #4496f9;
 }

@@ -1283,6 +1283,9 @@ width: 190px;
 .new .slider {
   height: 175px;
 }
+.slider i:hover{
+  color: #4496f9;
+}
 .slider .info>a {
   display: block;
     max-height: 60px;
@@ -1304,4 +1307,198 @@ width: 190px;
   height: 70px;
   overflow: hidden;
 }
+/* 广告轮播 */
+.advertise {
+  margin-top: 30px;
+  height:118px;
+  background: #fff;
+  border:1px solid #eee;
+}
+.advertise .content {
+  position: relative;
+  overflow: hidden;
+  width: 1090px;
+  margin: 30px 27px auto;
 
+}
+.advertise .content ul li {
+  position: relative;
+  float: left;
+  width:272px;
+  height: 64px;
+}
+.advertise .content ul li img {
+  display: block;
+  position: absolute;
+  margin: auto;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  max-width: 272px;
+  max-height:64px;
+}
+/* 底部 */
+footer {
+  margin-top: 40px;
+    padding-bottom: 120px;
+    font-size: 12px;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+}
+footer .border-top {
+  border: 1px solid #eee;
+  width: 100%;
+  height: 9px;
+  background:url(../images/footer-bor.jpg) repeat;
+}
+footer .content {
+  padding-top:28px;
+  padding-bottom: 20px;
+  height:180px;
+}
+footer .content dl {
+  float: left;
+  width: 237px;
+}
+footer .content dl dt {
+  color: #666;
+  font-size: 14px;
+  font-weight: bolder;
+  height: 38px;
+}
+footer .content dl dd a{
+  position: relative;
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+footer .content dl dd a.download,
+footer .content dl dd a:hover {
+  color: #4496f7;
+  cursor: pointer;
+}
+footer .content dl dd p:nth-child(1){
+  color: #4496f9;
+  font-size: 18px;
+  font-weight: 700;
+}
+footer .content dl dd p:nth-child(2) {
+  position: relative;
+  line-height: 24px;
+  color: #a7a7a7;
+  overflow: hidden;
+}
+footer .content dl dd p:nth-child(3) {
+  position: relative;
+  margin-top: 5px;
+  line-height: 24px;
+  color: #a7a7a7;
+  overflow: hidden;
+}
+footer .content dl dd p:nth-child(3) a {
+  float: left;
+  padding-left:0;
+  margin-right: 10px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/sprite.png);
+}
+footer .content dl dd p:nth-child(3) a:nth-child(1) {
+  background-position: -90px -99px;
+}
+footer .content dl dd p:nth-child(3) a:nth-child(2) {
+  background-position: -118px -99px;
+}
+footer .content dl dd p:nth-child(3) a:nth-child(3) {
+  background-position: -150px 0px;
+}
+footer .content .content-r div {
+display: inline-block;
+
+}
+footer .content .content-r div:nth-child(2) {
+  margin-left:10px;
+}
+footer .content .content-r img {
+  width: 110px;
+    height: 110px;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+footer .content .content-r p {
+  color:#666;
+}
+footer .friend {
+  width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  line-height: 26px;
+  height: 26px;
+  overflow: hidden;
+}
+footer .friend ul li{
+display: inline-block;
+margin-right:20px;
+}
+footer .friend ul li a {
+  color:#999;
+}
+footer .link {
+  padding-top: 10px;
+    line-height: 30px;
+    text-align: center;
+    color: #a9a9a9;
+    width: 1190px;
+    margin: 0 auto;
+}
+footer .link a {
+  padding:0 14px;
+  color:#999;
+}
+footer .link a:hover {
+  color: #4496f9;
+}
+
+footer .copyright {
+  line-height: 26px;
+    text-align: center;
+    color: #c1c1c1;
+    font-size: 12px;
+}
+footer .copyright a {
+  color: #c1c1c1;
+  padding: 10px;
+}
+footer .copyright>span>span {
+  color: #ff7422;
+}
+footer .copyright a:nth-child(3) {
+  color: #4496f9;
+}
+footer .copyright img {
+  width: 14px;
+  position: relative;
+  top: 6px;
+}
+footer .auth-img {
+  margin-top: 26px;
+  text-align: center;
+}
+footer .auth-img a {
+  width: 90px;
+    height: 30px;
+    display: inline-block;
+}
+footer .auth-img a img {
+  width: 100%;
+  height:100%;
+}

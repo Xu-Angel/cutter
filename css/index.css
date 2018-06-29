@@ -1280,11 +1280,8 @@ width: 190px;
   bottom: 0;
   margin: auto;
 }
-.news .slider {
+.new .slider {
   height: 175px;
-}
-.news .slider .content{
-  width: 1062px;
 }
 .slider .info>a {
   display: block;

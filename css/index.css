@@ -2,7 +2,12 @@
   position: relative;
   margin-top: 20px;
 }
-
+.chemical-right ul li h4 a {
+  color: #555;
+}
+.chemical-right ul li h4 a:hover{
+  color: #3287f1
+}
 .more {
   position: absolute;
   top: 20px;
@@ -14,6 +19,7 @@
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 2px;
+  color:#aaa;
 }
 
 /* 用户头部 */
@@ -216,7 +222,9 @@ nav ul li {
   line-height: 40px;
   color: #333;
 }
-
+nav ul li a {
+  color:#333;
+}
 nav ul li a.active {
   font-weight: 700;
 }
@@ -472,6 +480,7 @@ ul.list-content li .list-wrapper {
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 2px;
+  color:#aaa;
 }
 
 .seckill-content {
@@ -577,7 +586,9 @@ ul.list-content li .list-wrapper {
   font-weight: 700;
   line-height: 20px;
 }
-
+.seckill-one .goods-title a {
+  color: #333;
+}
 .seckill-content .seckill-one .price {
   margin: 8px 0;
   color: #db1b1b;
@@ -651,7 +662,23 @@ ul.list-content li .list-wrapper {
   background: #4496f9;
   border-radius: 2px;
 }
-
+.seckill-content div.btn.will:hover div
+{
+  border-right:30px solid#3287f1;
+  border-bottom:40px solid #3287f1;
+}
+.seckill-content div.btn.now:hover div
+{
+  border-right:30px solid#f36a1a;
+  border-bottom:40px solid #f36a1a;
+}
+.seckill-content .seckill-one .buy-now:hover,
+.seckill-content div.btn.will:hover a{
+background-color:#3287f1;
+}
+.seckill-content div.btn.now:hover a{
+  background-color:#f36a1a;
+  }
 .seckill-content .seckill-one .img {
   position: absolute;
   top: 55px;
@@ -692,8 +719,12 @@ ul.list-content li .list-wrapper {
 
 /* TODO:seckill-two */
 
-.seckill-two {}
-
+.seckill-two .title a{
+  color: #333;
+}
+.seckill-two .title a:hover {
+  color: #4496f9;
+}
 .seckill-two .cut-down {
   float: right;
   padding: 3px 10px 3px 20px;
@@ -799,7 +830,18 @@ ul.list-content li .list-wrapper {
   border-bottom: 40px solid #ff7422;
   border-left: 30px solid transparent;
 }
-
+.seckill-content div.btn.will>div {
+  position: absolute;
+  top: 0;
+  right: 75px;
+  z-index: 200;
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-right: 30px solid #4496f9;
+  border-bottom: 40px solid #4496f9;
+  border-left: 30px solid transparent;
+}
 .seckill-content .btn a {
   display: inline-block;
   width: 65px;
@@ -813,7 +855,19 @@ ul.list-content li .list-wrapper {
   text-align: right;
   background: #ff7422;
 }
-
+.seckill-content .btn.will a {
+  display: inline-block;
+  width: 65px;
+  height: 80px;
+  padding-right: 10px;
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 80px;
+  color: #fff;
+  text-align: right;
+  background: #4496f9;
+}
 /* 日用化工 */
 
 .chemical {
@@ -951,7 +1005,21 @@ ul.list-content li .list-wrapper {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
+.chemical-right .chemical-content em {
+  display: inline-block;
+  text-align: center;
+  width:18px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 16px;
+  color:#fff;
+  background:#db1b1b;
+  border-radius: 15%;
+  -webkit-border-radius: 15%;
+  -moz-border-radius: 15%;
+  -ms-border-radius: 15%;
+  -o-border-radius: 15%;
+}
 .chemical-detail a {
   float: left;
   width: 110px;
@@ -1028,7 +1096,9 @@ ul.list-content li .list-wrapper {
   box-sizing: border-box;
   /* height: 190px; */
 }
-
+.market-info .right {
+  padding-top:0;
+}
 .market-info .right ul li {
   display: inline-block;
   margin-right: 30px;
@@ -1042,7 +1112,9 @@ ul.list-content li .list-wrapper {
 .market-info .right ul li:hover {
   color: #4496f9;
 }
-
+.market-info .title {
+  position: relative;
+}
 .market-info .right ul li.active {
   color: #4496f9;
   border-bottom-color: #4496f9;
@@ -1059,21 +1131,24 @@ ul.list-content li .list-wrapper {
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 2px;
+  color:#aaa;
 }
 
 .right .title>a:hover,
+.seckill .seckill-head a:hover,
 .more:hover {
+  color:#ff7422;
   border-color: #ff7422;
 }
-
-.right .title>a span,
+/* 父级hover 给带来的颜色改变是影响不到的 如果自己已经设置了颜色 */
+/* .right .title>a span,
 .right .title>a i {
   font-size: 12px;
   color: #aaa;
-}
+} */
 
-.right .title>a span:hover,
-.right .title>a i:hover {
+.right .title>a span:hover
+ {
   color: #ff7422;
 }
 
@@ -1150,10 +1225,14 @@ ul.list-content li .list-wrapper {
 /* 交易动态 */
 
 .pay-dynamic .wrapper .left {
-  height: 190px;
+  height: 192px;
   background: url(../images//module1.png);
+  border-bottom:1px solid #fff;
 }
-
+.pay-dynamic .wrapper .right{
+  padding-top:0;
+  padding-bottom: 0;
+}
 .pay-dynamic .dynamic-content .head {
   margin-bottom: 30px;
   overflow: hidden;
@@ -1164,7 +1243,7 @@ ul.list-content li .list-wrapper {
 
 .pay-dynamic .dynamic-content .content {
   position: relative;
-  margin: 0 0 15px 20px;
+  margin: 0 0 0 20px;
 }
 
 .pay-dynamic .right .head>div {
@@ -1183,7 +1262,8 @@ ul.list-content li .list-wrapper {
 }
 
 .pay-dynamic .right .buy-content {
-  width: 395px;
+  width: 345px;
+  margin-left:50px;
 }
 
 .pay-dynamic .right .state {
@@ -1214,14 +1294,15 @@ ul.list-content li .list-wrapper {
 
 .pay-dynamic .right .dynamic-content .content .content-wrapper .content {
   margin: 0;
-  margin-left: -6px;
+  margin-left: 41px;
 }
 
 .pay-dynamic .right .dynamic-content .content .content-wrapper .state {
-  margin: 0;
-  margin-left: 230px;
+  color:#f36a1a;
 }
-
+.pay-dynamic .right .dynamic-content .content .content-wrapper .time{
+  margin-left:180px;
+}
 /* 原料供应 */
 
 .supply {
@@ -1732,6 +1813,7 @@ footer .content .content-r p {
 }
 
 footer .friend {
+  display: none;
   width: 1190px;
   height: 26px;
   padding: 0 10px;
@@ -1925,8 +2007,7 @@ footer .auth-img a img {
 
 .left-floor {
   position: fixed;
-  top: 50%;
-  left: 15%;
+  left: 0%;
   z-index: 600;
   font-size: 12px;
   -webkit-transition: opacity .5s;
@@ -1971,11 +2052,13 @@ footer .auth-img a img {
 }
 
 /* 用户登录 */
-
+.login {
+  position: relative;
+}
 .login-wrapper {
   position: absolute;
-  top: 25%;
-  right: 25%;
+  top: 200px;
+  right: 10%;
   width: 250px;
   height: 320px;
   background: #fff;
@@ -1988,8 +2071,108 @@ footer .auth-img a img {
   background: #fff;
 }
 
-.login-content .login-head {}
+.login-content .login-head {
+  padding: 30px 0 20px 40px;
+  border-bottom: 1px solid #eee;
+  background-image: url(../images/sprite2.png);
+  background-position: -375px 0px;
+}
 
-.login-content .login-state {}
+.login-content .login-head .avtar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  float: left;
+}
 
-.login-content .login-bottom {}
+.login-content .login-head>p {
+  margin-left: 70px;
+}
+
+.login-content .login-head>p span:nth-child(2) {
+  display: block;
+  color: #999;
+  line-height: 22px;
+}
+
+.login-content .login-head>p span:nth-child(1) {
+  display: block;
+  color: #333;
+  line-height: 22px;
+}
+
+.login-content .login-head .avtar img {
+  width: 100%;
+  height: 100%;
+}
+
+.login-content .login-state {
+  padding: 5px 0;
+  height: 40px;
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+}
+.login-content .login-state a{
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  width: 116px;
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+}
+.login-content .login-state a:hover {
+  color:#4496f9;
+}
+.login-content .login-state a>span{
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+}
+.login-content .login-state a:nth-child(1){
+  border-right: 1px solid #eee;
+}
+.login-content .login-state i {
+  width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/sprite2.png);
+    margin-top: -3px;
+    margin-right: 5px;
+}
+.login-content .login-state i.i-login {
+  background-position: -484px -100px;
+}
+.login-content .login-state i.i-reg {
+  background-position: -437px -100px;
+}
+.login-content .login-bottom {
+  padding: 30px 0;
+  overflow: hidden;
+}
+.login-content .login-bottom a {
+  float: left;
+  width: 72px;
+  border-right: 1px solid #eee;
+  padding-left: 5px;
+  text-align: center;
+}
+.login-content .login-bottom a i {
+  display: block;
+    font-size: 35px;
+    color: #4496f9;
+    margin: -8px 0 8px;
+}
+.login-content .login-bottom .login-footer-1 {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+.login-content .login-bottom .login-footer-2 {
+  display: block;
+  color: #999;
+  padding-left: 5px;
+}

@@ -58,6 +58,112 @@
       </div>
     </div>
   </div>
+   <!-- 左边楼梯 -->
+  
+   <div class="left-floor">
+    <ul>
+      <li>
+        <a href="#">
+          <span>限时抢购</span>
+        </a>
+
+      </li>
+      <li>
+        <a href="#">
+          <span>日用化工</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>农业化工</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>石油化工</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>资讯行情</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>交易动态</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>交易流程</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>原料供应</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>知识交易</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>奇化融</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>媒体报道</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>顶部
+            <i class="kicon-arrow-up-fill"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+   <!-- 用户登录 -->
+   <div class="login wrapper clearfix">
+    <div class="login-wrapper">
+      <div class="login-content">
+        <div class="login-head">
+          <div class="avtar">
+            <img src="./images/unlogin-head.png" alt="">
+          </div>
+          <p>
+            <span>Hi,早上好</span>
+            <span>欢迎来到奇化网</span>
+        </p>
+        </div>
+        <div class="login-state">
+          <a href="#"> <i class="i-login"></i> <span>登录</span></a>
+          <a href="#"> <i class="i-reg"></i> <span>注册</span></a>
+        </div>
+        <div class="login-bottom">
+          <a href="#">
+            <i class="kicon-gouwuche1"></i>
+            <span class="login-footer-1">采购商</span>
+            <span class="login-footer-2">如何找货?</span>
+          </a>
+          <a href="#">
+            <i class="kicon-dianpu1"></i>
+            <span class="login-footer-1">供应商</span>
+            <span class="login-footer-2">如何卖货?</span>
+          </a>
+          <a href="#">
+            <i class="kicon-jinrong"></i>
+            <span class="login-footer-1">奇化融</span>
+            <span class="login-footer-2">如何申请</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- 网站头部 -->
   <div>
     <header class="wrapper">
@@ -1502,7 +1608,7 @@
         <h3>
           <i class="kicon-shijian"></i>限时抢购
         </h3>
-        <a href="#">更多
+        <a href="#" class="more">更多
           <i class="kicon-arrow-right"></i>
         </a>
       </div>
@@ -1576,7 +1682,7 @@
               <p>
                 <span class="seckill-bar"></span>
               </p>
-              <div class="btn">
+              <div class="btn now">
                 <div></div>
                 <a href="#">立即抢购</a>
               </div>
@@ -1615,9 +1721,9 @@
               <p>
                 <span class="seckill-bar"></span>
               </p>
-              <div class="btn">
+              <div class="btn will">
                 <div></div>
-                <a href="#">立即抢购</a>
+                <a href="#">即将开始</a>
               </div>
             </div>
           </div>
@@ -1660,7 +1766,7 @@
         <ul>
           <li>
             <h4>
-              <a href="#">【OXEA】1，3-丁二醇 化妆品级</a>
+              <a href="#">OXEA】1，3-丁二醇 化妆品级</a>
             </h4>
             <div class="chemical-detail">
               <a href="#">
@@ -1672,6 +1778,7 @@
                   <span>38.00</span>/千克</p>
                 <p>型号：-</p>
                 <p>等级：化妆品等级</p>
+                <em>券</em>
               </div>
             </div>
           </li>
@@ -1689,6 +1796,7 @@
                   <span>38.00</span>/千克</p>
                 <p>型号：-</p>
                 <p>等级：化妆品等级</p>
+                <em>折</em>
               </div>
             </div>
           </li>
@@ -2049,7 +2157,7 @@
         <div class="left-wrapper">
           <h3>资讯行情</h3>
           <span>最新资讯行情</span>
-          <a href="#">查看全部
+          <a href="#" >查看全部
             <i class="kicon-jiantou"></i>
           </a>
         </div>
@@ -2061,8 +2169,10 @@
             <li>周行情</li>
             <li>市场快讯</li>
             <li>行业动态</li>
+            <li>周行情</li>
+            <li>行业动态</li>
           </ul>
-          <a href="#">更多
+          <a href="#" class="more">更多
             <i class="kicon-arrow-right"></i>
           </a>
         </div>
@@ -2123,50 +2233,56 @@
       <div class="right">
         <div class="dynamic-content">
           <div class="head clearfix">
-            <div class="user">用户</div>
-            <div class="buy-content">采购内容</div>
+            <div class="user">采购商</div>
+            <div class="buy-content">商品</div>
             <div class="state">交易状态</div>
-            <div class="time">时间</div>
+            <div class="time">购买量</div>
           </div>
           <div class="content clearfix">
             <div class="content-wrapper">
               <i class="slider-icon"></i>
               <ul>
                 <li class="clearfix">
-                  <span class="user">ru**33</span>
+                  <span class="user">广州浪********公司</span>
                   <span class="content">【春金】丙三醇 ≥99.7% 医药级</span>
+                  <span class="time">2吨</span>
                   <span class="state">货物交付中</span>
-                  <span class="time">2018-06-25</span>
+                  
                 </li>
                 <li class="clearfix">
-                  <span class="user">ru**33</span>
+                  <span class="user">广州浪********公司</span>
                   <span class="content">【春金】丙三醇 ≥99.7% 医药级</span>
+                  <span class="time">2吨</span>
                   <span class="state">货物交付中</span>
-                  <span class="time">2018-06-25</span>
+                  
                 </li>
                 <li class="clearfix">
-                  <span class="user">ru**33</span>
+                  <span class="user">广州浪********公司</span>
                   <span class="content">【春金】丙三醇 ≥99.7% 医药级</span>
+                  <span class="time">2吨</span>
                   <span class="state">货物交付中</span>
-                  <span class="time">2018-06-25</span>
+                  
                 </li>
                 <li class="clearfix">
-                  <span class="user">ru**33</span>
+                  <span class="user">广州浪********公司</span>
                   <span class="content">【春金】丙三醇 ≥99.7% 医药级</span>
+                  <span class="time">2吨</span>
                   <span class="state">货物交付中</span>
-                  <span class="time">2018-06-25</span>
+                 
                 </li>
                 <li class="clearfix">
-                  <span class="user">ru**33</span>
+                  <span class="user">广州浪********公司</span>
                   <span class="content">【春金】丙三醇 ≥99.7% 医药级</span>
+                  <span class="time">2吨</span>
                   <span class="state">货物交付中</span>
-                  <span class="time">2018-06-25</span>
+                  
                 </li>
                 <li class="clearfix">
-                  <span class="user">ru**33</span>
+                  <span class="user">广州浪********公司</span>
                   <span class="content">【春金】丙三醇 ≥99.7% 医药级</span>
+                  <span class="time">2吨</span>
                   <span class="state">货物交付中</span>
-                  <span class="time">2018-06-25</span>
+                  
                 </li>
               </ul>
             </div>
@@ -2312,10 +2428,13 @@
       </div>
       <div class="table">
         <div class="thead">
-          <span class="title">供应商品</span>
-          <span class="price">报价</span>
-          <span class="address">所在地区</span>
-          <span class="company">商家</span>
+          <span class="title">商品</span>
+          <span>CAS号</span>
+          <span class="address">含量/纯度
+            <span>供应量</span>
+          </span>
+          <span class="price">价格</span>
+          <span class="company">供应商</span>
         </div>
         <ul class="tbody">
           <li>
@@ -2323,35 +2442,35 @@
             <span class="price">面试</span>
             <span class="address">广东-广州</span>
             <span class="company">测试公********公司</span>
-            <a href="#" class="see-more">查看</a>
+            <a href="#" class="see-more">询盘</a>
           </li>
           <li>
             <span class="title">供应商</span>
             <span class="price">面试</span>
             <span class="address">广东-广州</span>
             <span class="company">测试公********公司</span>
-            <a href="#" class="see-more">查看</a>
+            <a href="#" class="see-more">询盘</a>
           </li>
           <li>
             <span class="title">供应商</span>
             <span class="price">面试</span>
             <span class="address">广东-广州</span>
             <span class="company">测试公********公司</span>
-            <a href="#" class="see-more">查看</a>
+            <a href="#" class="see-more">询盘</a>
           </li>
           <li>
             <span class="title">供应商</span>
             <span class="price">面试</span>
             <span class="address">广东-广州</span>
             <span class="company">测试公********公司</span>
-            <a href="#" class="see-more">查看</a>
+            <a href="#" class="see-more">询盘</a>
           </li>
           <li>
             <span class="title">供应商</span>
             <span class="price">面试</span>
             <span class="address">广东-广州</span>
             <span class="company">测试公********公司</span>
-            <a href="#" class="see-more">查看</a>
+            <a href="#" class="see-more">询盘</a>
           </li>
         </ul>
       </div>
@@ -2589,10 +2708,16 @@
         <img src="./images/pic-01.jpg" alt="">
       </a>
       <a href="#">
+        <img src="./images/cnnic_en.png" alt="">
+      </a>
+      <a href="#">
         <img src="./images/pic-03.jpg" alt="">
       </a>
       <a href="#">
         <img src="./images/pic-04.jpg" alt="">
+      </a>
+      <a href="#">
+        <img src="./images/pic-05.jpg" alt="">
       </a>
       <a href="#">
         <img src="./images/pic-06.jpg" alt="">
@@ -2635,106 +2760,8 @@
       </a>
     </div>
   </div>
-  <!-- 左边楼梯 -->
-  <div class="left-floor">
-    <ul>
-      <li>
-        <a href="#">
-          <span>限时抢购</span>
-        </a>
-
-      </li>
-      <li>
-        <a href="#">
-          <span>日用化工</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>农业化工</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>石油化工</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>资讯行情</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>交易动态</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>交易流程</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>原料供应</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>知识交易</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>奇化融</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>媒体报道</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>顶部
-            <i class="kicon-arrow-up-fill"></i>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <!-- 用户登录 -->
-  <div class="login wrapper">
-    <div class="login-wrapper">
-      <div class="login-content">
-        <div class="login-head">
-          <div class="avtar"></div>
-          <p></p>
-        </div>
-        <div class="login-state">
-          <a href=""></a>
-          <a href=""></a>
-        </div>
-        <div class="login-bottom">
-          <a href="#">
-            <i></i>
-            <span></span>
-            <span></span>
-          </a>
-          <a href="#">
-            <i></i>
-            <span></span>
-            <span></span>
-          </a>
-          <a href="#">
-            <i></i>
-            <span></span>
-            <span></span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
+ 
   <!-- 固定搜索 -->
 </body>
 

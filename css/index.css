@@ -8,6 +8,7 @@
 .chemical-right ul li h4 a:hover{
   color: #3287f1
 }
+
 .more {
   position: absolute;
   top: 20px;
@@ -33,9 +34,52 @@
 
 .top-r ul li {
   display: inline-block;
+  position: relative;
   /* border-right: 1px solid black */
 }
-
+.top-r .links {
+      display: none;
+    position: absolute;
+    z-index: 40;
+    padding: 13px 0;
+    width: 200px;
+    left: -9px;
+    top: 34px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: -1px 0 3px #f1f1f1;
+}
+.top-r .mine {
+  position:relative;
+}
+.top-r .mine:hover {
+      background: #fff;
+    border-color: #ddd;
+    box-shadow: -1px 0 3px #f1f1f1;
+}
+.top-r .links a:hover {
+  color:#4496f9;
+}
+.top-r .mine:hover .links {
+  display: block;
+  z-index:1300;
+}
+.top-r .links>div {
+  float:left;
+}
+.top-r .links>div:nth-child(1){
+    width: 90px;
+    padding-left: 10px;
+}
+.top-r .links>div:nth-child(2){
+    width: 78px;
+    padding-left: 22px;
+}
+.top-r .links a{
+  display: block;
+    height: 24px;
+    line-height: 24px;
+}
 .top-l a {
   margin-left: 11px;
   color: #3287f1;
@@ -68,6 +112,53 @@ span.spacer {
   vertical-align: middle;
 }
 
+.nav-cart-wrap {
+    position: absolute;
+    display: none;
+    width: 278px;
+    border: 1px solid #ddd;
+    right: 0;
+    top: 35px;
+    background: #fff;
+    text-indent: 0;
+    z-index: 1002;
+    max-height: 475px;
+    overflow-y: auto;
+}
+ .nav-cart-wrap .empty {
+    padding-bottom: 0;
+}
+
+ .nav-cart-wrap .cart-details {
+    position: relative;
+    padding: 0 9px;
+}
+.nav-cart-wrap .tips {
+    padding: 25px 0;
+    height: 20px;
+    line-height: 20px;
+    color: #8c8c8c;
+    text-align: center;
+    font-size: 13px;}
+    .header .nav-cart-wrap .shopping {
+    color: #1070ec;
+}
+header .cart:hover .info-wrap {
+    border-bottom-color: #fff;
+}
+ .info-wrap {
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+    z-index: 1024;
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #aaa;
+}
+header .cart:hover .nav-cart-wrap{
+  display:block;
+}
 /* 网站头部 */
 
 header {
@@ -97,9 +188,13 @@ header {
 }
 
 .hot-search a {
+  display:inline-block;
+  margin-right: 8px;
   color: #aaa;
 }
-
+.hot-search a:hover {
+  color: #287adf;
+}
 header .cart {
   position: absolute;
   top: 32px;
@@ -129,7 +224,7 @@ header .cart {
   background-position: -170px -28px;
 }
 
-.cart a {
+.cart>a {
   position: relative;
   z-index: 1024;
   display: block;
@@ -252,16 +347,23 @@ ul.list {
   background: rgba(27, 35, 45, .8);
 }
 
-.list li:hover {
+.list>li:hover {
   background: #fff;
 }
-
-.list li dl {
+.list>li:nth-last-child(1):hover {
+  height:50px;
+  border-bottom:2px solid #287adf;
+}
+ul.list li:hover dl ul li{
+  display:block;
+  z-index:1200;
+}
+.list>li>dl {
   width: 170px;
   width: 170px;
   height: 57px;
   margin: 0 15px;
-  overflow: hidden;
+ /* overflow: hidden;*/
   border-bottom: 1px solid hsla(0, 0%, 100%, .1);
 }
 
@@ -273,7 +375,7 @@ ul.list {
   color: #fff;
 }
 
-.list dl dt a {
+.list>li>dl>dt>a {
   display: inline-block;
   width: 170px;
   height: 20px;
@@ -301,15 +403,15 @@ ul.list {
   vertical-align: middle;
 }
 
-.list li:hover dl dd a {
+.list>li:hover dl dd a {
   color: #666;
 }
 
-.list li:hover dl dt a {
+.list>li:hover dl dt a {
   color: #4496f9;
 }
 
-.list dl dt a:hover {
+.list>dl dt a:hover {
   color: #4496f9;
 }
 
@@ -325,11 +427,11 @@ ul.list {
 
 ul.list-content>li {
   position: absolute;
-  top: 0;
-  left: 210px;
+  top: -50px;
+  left: 197px;
   display: none;
   width: 980px;
-  height: 398px;
+  height: 396px;
   background: #fff;
   border-right: 2px solid #287adf;
   border-bottom: 2px solid #287adf;
@@ -341,7 +443,7 @@ ul.list-content>li.on {
 
 ul.list-content li .list-wrapper {
   width: 720px;
-  height: 400px;
+  height: 396px;
   overflow-y: scroll;
 }
 
@@ -390,7 +492,7 @@ ul.list-content li .list-wrapper {
   border-left: 1px solid #e0e0e0;
 }
 
-.list-item dl dd a:hover {
+.list-content .list-wrapper .list-item dl dd a:hover {
   color: #4496f9;
 }
 
@@ -401,7 +503,7 @@ ul.list-content li .list-wrapper {
   z-index: 200;
   width: 240px;
   width: 240px;
-  height: 380px;
+  height: 376px;
   padding: 9px;
   background: #f7f7f7;
 }
@@ -1098,6 +1200,7 @@ background-color:#3287f1;
 }
 .market-info .right {
   padding-top:0;
+  padding-bottom: 0;
 }
 .market-info .right ul li {
   display: inline-block;
@@ -1114,6 +1217,7 @@ background-color:#3287f1;
 }
 .market-info .title {
   position: relative;
+  padding-top: 20px;
 }
 .market-info .right ul li.active {
   color: #4496f9;
@@ -1449,6 +1553,9 @@ a.see-more {
   background-color: #ff7244;
   border-radius: 2px;
 }
+a.see-more:hover {
+  background-color:#f36a1a;
+}
 
 /* 知识交易 */
 
@@ -1497,44 +1604,73 @@ a.see-more {
 }
 
 .table .thead .title {
-  width: 220px;
+  width: 180px;
+  margin-left: -20px;
 }
-
+.table .thead .cas {
+  width:115px;
+}
 .table .thead .price {
-  width: 190px;
+  width: 105px;
   color: #333;
 }
-
+.table .thead .supp{
+width:120px;
+}
 .table .thead .address {
-  width: 190px;
+  width: 104px;
 }
 
 .table .thead .company {
-  width: 200px;
+  width: 155px;
 }
 
-.table .tbody span.title {
-  width: 220px;
+.table .tbody span.tit {
+  width: 180px;
 }
-
+.table .tbody span.tit a {
+  color:#aaa;
+}
+.table .tbody span.tit a:hover {
+  color:#4496f9;
+}
+.table .tbody span.cas {
+  width:115px;
+}
 .table .tbody span.price {
-  width: 190px;
+  width: 105px;
   color: #db1b1b;
 }
 
 .table .tbody span.address {
-  width: 190px;
+  width: 104px;
 }
-
+.table .tbody span.weight {
+  width:120px;
+}
+.table .tbody span.supp {
+  width:120px;
+}
 .table .tbody span.company {
-  width: 200px;
+  width: 155px;
 }
 
 .knowledge .right {
   padding-top: 0;
   padding-bottom: 0;
 }
+ .right .head {
+      width: 950px;
+    margin-left: -20px;
+}
 
+.knowledge .tbody .see-more {
+  right: 0;
+}
+.knowledge .head .more {
+  right:20px;
+  top:15px;
+}
 /* 商家入驻 */
 
 .view-more {
@@ -2054,6 +2190,7 @@ footer .auth-img a img {
 /* 用户登录 */
 .login {
   position: relative;
+  z-index: 999;
 }
 .login-wrapper {
   position: absolute;
@@ -2062,7 +2199,7 @@ footer .auth-img a img {
   width: 250px;
   height: 320px;
   background: #fff;
-  opacity: .4;
+  /*opacity: .4;*/
 }
 
 .login-wrapper .login-content {
@@ -2123,16 +2260,24 @@ footer .auth-img a img {
   color: #333;
   font-weight: 700;
 }
-.login-content .login-state a:hover {
+/*.login-content .login-state a:hover {
   color:#4496f9;
-}
+}*/
 .login-content .login-state a>span{
   text-align: center;
-  color: #333;
-  font-weight: 700;
+  /*color: #333;
+*/  font-weight: 700;
 }
 .login-content .login-state a:nth-child(1){
   border-right: 1px solid #eee;
+}
+.login .login-wrapper .login-content .login-state>a:hover
+{
+  color:#4496f9;
+}
+.login .login-wrapper .login-content .login-state>a:hover i{
+  color:#4496f9!important;
+
 }
 .login-content .login-state i {
   width: 16px;
@@ -2159,6 +2304,19 @@ footer .auth-img a img {
   border-right: 1px solid #eee;
   padding-left: 5px;
   text-align: center;
+}
+.login-content .login-bottom a:hover i{
+  margin: 0;
+    -webkit-transition: margin .2s;
+    transition: margin .2s;
+}
+.login-content .login-bottom a:hover .login-footer-1{
+  margin-bottom: 0; 
+    -webkit-transition: margin .2s;
+    transition: margin .2s;
+}
+.login-content .login-bottom a:hover span{
+  color: #4496f9
 }
 .login-content .login-bottom a i {
   display: block;

@@ -38,6 +38,8 @@
   background: #fff;
   border-color: #ddd;
   box-shadow: -1px 0 3px #f1f1f1;
+  /* z-index: 99999900; */
+
 }
 
 .top-r .links a:hover {
@@ -46,7 +48,7 @@
 
 .top-r .mine:hover .links {
   display: block;
-  z-index: 1300;
+  /* z-index: 99999900; */
 }
 
 .top-r .links>div {

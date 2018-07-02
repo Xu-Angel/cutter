@@ -171,7 +171,7 @@
           </div>
           <div class="img-small">
             <ul>
-              <li>
+              <li class="active">
                 <img src="images/5a39f1d186f0b.jpeg" alt="">
               </li>
             </ul>
@@ -187,9 +187,10 @@
       <!-- 右侧信息 -->
       <div class="info-right">
         <div class="info-head">
-          <span class="self">奇化自营</span>
+
           <div class="title-container">
-            <h3>甲醇99.98%国标</h3>
+
+            <h3><span class="self">奇化自营</span>甲醇99.98%国标甲醇99.98%国标甲醇99.98%国标甲醇99.98%国标</h3>
             <p class="sub-title">简称<a href="#">甲醇</a></p>
             <p class="cas">CAS号：<a href="#">107-8-0</a></p>
           </div>
@@ -209,13 +210,13 @@
             <p><span class="num">1277.5</span><span>吨</span></p>
             <p>已售</p>
           </div>
-         
+
         </div>
         <div class="seckill">
-            <span>抢购</span>
-            <span>此商品正在进行抢购活动，价格更优惠哦</span>
-            <a href="#">进入>></a>
-          </div>
+          <span>抢购</span>
+          <span>此商品正在进行抢购活动，价格更优惠哦</span>
+          <a href="#">进入>></a>
+        </div>
         <div class="info-detail">
           <ul>
             <li>
@@ -227,7 +228,9 @@
             </li>
             <li><span>包装规则</span><em class="bulk">散装</em></li>
             <li><span>库存</span><em>有货</em></li>
-            <li><span>购买数量</span><p><a href="#">-</a><input type="text"  value="1" class="in"><a href="#">+</a><span class="unit">桶</span><span>(最低起订量：1吨)</span></p></li>
+            <li><span>购买数量</span>
+              <p><a href="javascript:0">-</a><input type="text" value="1" class="in"><a href="javascript:0">+</a><span class="unit">桶</span><span>(最低起订量：1吨)</span></p>
+            </li>
             <li><span>合计</span><em><span class="blue">100</span>吨</em></li>
             <li><span>总价</span><em class="red">￥<span>2600.00</span></em></li>
           </ul>
@@ -244,7 +247,7 @@
                 <span>收货方式</span><span class="mark trunk"><i class="kicon-truck"></i><em>送货上门</em></span><span class="trunk"><i class="kicon-warehouse"></i><em>商家自提</em></span>
               </li>
               <li>
-                <span>支付方式</span><span class="mark pay"><i class="kicon-zhuanzhang"></i><em>线下转账</em></span><span class="pay"><i class="kicon-zaixianzhifu"></i><em>在线支付</em></span>
+                <span>支付方式</span><span class="mark pay"><i class="kicon-zhuanzhang"></i><em>线下转账</em></span><span class="pay"><i class="kicon-zhuanzhang"></i><em>在线支付</em></span>
               </li>
             </ul>
           </div>
@@ -275,34 +278,138 @@
           <a href="#">【中石油】甲醇 国标</a>
           <p>￥35.0/吨</p>
         </li>
-        
+
       </ul>
     </div>
     <!-- 商品详情 -->
     <div class="goods-details">
       <h4><span>商品详情</span></h4>
       <div class="details">
-        <ul>
-          <li><span>化学品名：</span><em>甲醇</em></li>
-          <li><span>中文别名：</span><em>暮春</em></li>
-          <li><span>商品英文名:</span><em>methanol</em></li>
-          <li><span>英文别名：</span><em>methyl alcohol</em></li>
-          <li><span>生产商:</span><em>广州立志</em></li>
-          <li><span>品牌名：</span><em>立志</em></li>
-          <li><span>产地：</span><em>广东 广州</em></li>
-          <li><span>性状：</span><em>无色有酒精气味易挥发的液体</em></li>
-          <li><span>纯度/含量</span><em>70%</em></li>
-          <li><span>质量等级</span><em>工业级</em></li>
-          <li><span>化学品性质</span><em>一般危险化学品</em></li>
-          <li><span>资料下载</span><p><a href="#">MSDS 下载</a><a href="#">TDS下载</a><a href="#">COA下载</a></p></li>
+        <ul class="clearfix">
+          <li class="p50"><span>化学品名：</span><em>甲醇</em></li>
+          <li class="p50"><span>中文别名：</span><em>暮春</em></li>
+          <li class="p50"><span>商品英文名：</span><em>methanol</em></li>
+          <li class="p50"><span>英文别名：</span><em>methyl alcohol</em></li>
+          <li class="p25"><span>生产商：</span><em>广州立志</em></li>
+          <li class="p25"><span>品牌名：</span><em>立志</em></li>
+          <li class="p25"><span>产地：</span><em>广东 广州</em></li>
+          <li class="p25"><span>性状：</span><em>无色有酒精气味易挥发的液体</em></li>
+          <li class="p25"><span>纯度/含量：</span><em>70%</em></li>
+          <li class="p25"><span>质量等级：</span><em>工业级</em></li>
+          <li class="p50"><span>化学品性质：</span><em>一般危险化学品</em></li>
+          <li class="p50"><span>资料下载：</span>
+            <p><a href="#" class="undownload">MSDS 下载</a><a href="#">TDS下载</a><a href="#">COA下载</a></p>
+          </li>
         </ul>
+      </div>
+      <div class="introduce">
+        <p class="details-title">简介</p>
+        <p>
+          化学式：CH3OH，甲醇挥发度高、无色、易燃、有毒，误饮5～10毫升能双目失明，大量饮用会导致死亡。甲醇通常由一氧化碳与氢气反应制得。 </p>
+      </div>
+      <div class="introduce">
+        <p class="details-title">特性</p>
+        <p>
+          易燃，其蒸气与空气可形成爆炸性混合物。遇明火、高热能引起燃烧爆炸。有剧毒，误饮5～10毫升能双目失明，大量饮用会导致死亡。 </p>
+        <div class="table">
+          <ul class="clearfix">
+            <li>
+              <span class="name green">外观</span>
+              <span class="val">
+              <span class="sp" title="清亮透明">清亮透明</span>
+              </span>
+              <span class="name green">色度</span>
+              <span class="val">
+              <span class="sp" title="3 Pt-Co">3 Pt-Co</span>
+              </span>
+            </li>
+            <li>
+              <span class="name green">水分</span>
+              <span class="val">
+              <span class="sp" title="0.015%">0.015%</span>
+              </span>
+              <span class="name green">密度（15℃）</span>
+              <span class="val">
+              <span class="sp" title="0.7960 kg/L">0.7960 kg/L</span>
+              </span>
+            </li>
+            <li>
+              <span class="name green">高锰酸钾氧化时间（15℃）</span>
+              <span class="val">
+              <span class="sp" title="＞60 minute">＞60 minute</span>
+              </span>
+              <span class="name">
+             <a class="anchor" target="_blank" href="#" title="CAS号">CAS号</a>
+             </span>
+              <span class="val">
+              <span class="sp" title="67-56-1;170082-17-4">
+							<a class="anchor" target="_blank" href="#" title="67-56-1;170082-17-4">67-56-1;170082-17-4</a>
+							</span>
+              </span>
+            </li>
+            <li>
+              <span class="name">质量等级</span>
+              <span class="val">
+              <span class="sp" title="国标">国标</span>
+              </span>
+              <span class="name">气味</span>
+              <span class="val">
+              <span class="sp" title="清淡，类似乙醇">清淡，类似乙醇</span>
+              </span>
+            </li>
+            <li>
+              <span class="name">熔点</span>
+              <span class="val"><span class="sp" title="-98 ℃">-98 ℃</span>
+              </span>
+              <span class="name">沸点</span>
+              <span class="val">
+              <span class="sp" title="64.7 ℃">64.7 ℃</span>
+              </span>
+            </li>
+            <li>
+              <span class="name">闪点</span>
+              <span class="val">
+              <span class="sp" title="11 ℃">11 ℃</span>
+              </span>
+              <span class="name">溶解性</span>
+              <span class="val">
+              <span class="sp" title="溶于水，可混溶于醇醚等多数有机溶剂">溶于水，可混溶于醇醚等多数有机溶剂</span>
+              </span>
+            </li>
+            <li>
+              <span class="name">PSA</span>
+              <span class="val">
+              <span class="sp" title="20.23">20.23</span>
+              </span>
+              <span class="name">分子量</span>
+              <span class="val">
+              <span class="sp" title="32.04">32.04</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="introduce">
+          <p class="details-title">用途</p>
+          <p>
+            1.基本有机原料，主要用于制甲醛、香精、染料、医药、防冻剂等。 2.制造乙烯和丙烯的重要原料。 3.用作涂料、清漆、虫胶、油墨、胶黏剂、染料、生物碱、醋酸纤维素、硝酸纤维素、乙基纤维素、聚乙烯醇缩丁醛等的溶剂。 4.是制造农药、医药、塑料、合成纤维及有机化工产品如甲醛、甲胺、氯甲烷、硫酸二甲酯等的原料。其他用作汽车防冻液、金属表面清洗剂和酒精变性剂等。 </p>
+        </div>
+        <div class="introduce">
+          <p class="details-title">存储条件</p>
+          <p>
+            储存于阴凉、通风的库房。远离火种、热源。库温不宜超过30℃。保持容器密封。应与氧化剂、酸类、碱金属等分开存放，切忌混储。采用防爆型照明、通风设施。禁止使用易产生火花的机械设备和工具。储区应备有泄漏应急处理设备和合适的收容材料。 </p>
+        </div>
+        <div class="introduce">
+          <p class="details-title">应急处理</p>
+          <p>
+            迅速撤离泄漏污染区人员至安全区，并进行隔离，严格限制出入。切断火源。建议应急处理人员戴自给正压式呼吸器，穿防静电工作服。不要直接接触泄漏物。尽可能切断泄漏源。防止流入下水道、排洪沟等限制性空间。小量泄漏：用砂土或其它不燃材料吸附或吸收。也可以用大量水冲洗，洗水稀释后放入废水系统。大量泄漏：构筑围堤或挖坑收容。用泡沫覆盖，降低蒸气灾害。用防爆泵转移至槽车或专用收集器内，回收或运至废物处理场所处置。 </p>
+        </div>
       </div>
     </div>
     <!-- 您浏览过的商品 -->
     <div class="guess seen">
       <h4><span class="st">您浏览过的商品</span></h4>
       <ul class="guess-ul clearfix">
-       
+
         <li class="fl item">
           <a href="#" class="img-wrap"><img src="./images/5a3b4c7beaddf.jpeg_250x250.png" alt="">
 
@@ -344,7 +451,7 @@
     <div class="guess">
       <h4><span class="st">最新商品</span></h4>
       <ul class="guess-ul clearfix">
-        
+
         <li class="fl item">
           <a href="#" class="img-wrap"><img src="./images/5a3b4c7beaddf.jpeg_250x250.png" alt="">
 

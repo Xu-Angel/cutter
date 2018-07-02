@@ -5,8 +5,8 @@
 .wrapper {
   position: relative;
   z-index: 1;
-  padding-bottom: 20px;
   width: 1200px;
+  padding-bottom: 20px;
   margin: 0 auto;
 }
 
@@ -19,23 +19,23 @@
 
 .goods-content {
   position: relative;
-  margin-bottom: 16px;
-  margin-top: 25px;
-  padding: 10px 0 10px 74px;
   width: 1200px;
   height: 140px;
+  padding: 10px 0 10px 74px;
+  margin-top: 25px;
+  margin-bottom: 16px;
+  overflow: hidden;
   background: #fff;
   border: 1px solid #f3f3f3;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .goods-content .img {
   position: absolute;
-  z-index: 3;
   top: -3px;
   left: 2px;
+  z-index: 3;
   width: 62px;
   height: 85px;
   background-image: url(../images/sprite-goods.png);
@@ -43,35 +43,35 @@
 }
 
 .goods-content .list li {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   width: 274px;
   height: 120px;
 }
 
 .goods-content .list .right .title {
-  margin-top: 10px;
   display: block;
-  line-height: 18px;
+  display: -webkit-box;
   max-height: 36px;
+  margin-top: 10px;
   overflow: hidden;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  display: -webkit-box;
-  font-size: 14px;
-  color: #333;
 }
 
 .goods-content .list .right .title:hover {
-  color: #4496f9
+  color: #4496f9;
 }
 
 .goods-content .list .right .price {
+  margin: 4px 0 10px;
+  font-size: 14px;
   line-height: 14px;
   color: #db1b1b;
-  font-size: 14px;
-  margin: 4px 0 10px;
 }
 
 .goods-content .list .right .buy {
@@ -79,12 +79,12 @@
   width: 62px;
   height: 20px;
   line-height: 18px;
+  color: #666;
   text-align: center;
   background: #f6f6f6;
-  border-color: #ddd;
   border: 1px solid #ccc;
+  border-color: #ddd;
   border-radius: 2px;
-  color: #666;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -106,35 +106,35 @@
 }
 
 .label {
-  border: 1px solid #ccc;
-  line-height: 12px;
   padding: 3px 26px 3px 10px;
   font-size: 12px;
+  line-height: 12px;
   cursor: pointer;
+  border: 1px solid #ccc;
 }
 
 .label .close {
   position: absolute;
-  font-style: normal;
-  margin-top: -11px;
   top: 50%;
   right: 0;
   width: 20px;
   height: 22px;
-  line-height: 22px;
-  text-align: center;
-  color: #aaa;
-  cursor: pointer;
+  margin-top: -11px;
   font-size: 16px;
+  font-style: normal;
+  line-height: 22px;
+  color: #aaa;
+  text-align: center;
+  cursor: pointer;
 }
 
 .filiter .filiter-name {
   display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  color: #333;
   width: 75px;
+  font-size: 12px;
   line-height: 24px;
+  color: #333;
+  vertical-align: top;
 }
 
 .filter .line-checked .label {
@@ -143,24 +143,24 @@
 
 .label.lb-static {
   position: relative;
-  cursor: text;
-  background: #fff;
-  padding-right: 22px;
   display: inline-block;
   height: 16px;
-  border: 1px solid #ccc;
-  line-height: 12px;
   padding: 3px 26px 3px 10px;
+  padding-right: 22px;
   font-size: 12px;
+  line-height: 12px;
+  cursor: text;
+  background: #fff;
+  border: 1px solid #ccc;
 }
 
 .label.lb-static .tips {
-  vertical-align: text-bottom;
-  color: #333;
-  padding-right: 3px;
-  line-height: 16px;
   display: inline-block;
   height: 16px;
+  padding-right: 3px;
+  line-height: 16px;
+  color: #333;
+  vertical-align: text-bottom;
 }
 
 .filiter .check-line {
@@ -174,10 +174,10 @@
 }
 
 .check-wrap .category-ul li {
-  height: 25px;
-  line-height: 25px;
   float: left;
+  height: 25px;
   padding: 0 10px;
+  line-height: 25px;
   cursor: pointer;
 }
 
@@ -186,35 +186,35 @@
 }
 
 .check-wrap .category-ul li.active {
-  background: #4496f9;
   color: #fff;
+  background: #4496f9;
 }
 
 /* TODO:.active */
 
 .filiter .btn-all.active {
-  background: #4496f9;
-  color: #fff;
-  border-color: #4496f9;
   margin-right: 0;
+  color: #fff;
+  background: #4496f9;
+  border-color: #4496f9;
 }
 
 .filiter .btn-all {
   width: 46px;
   height: 25px;
+  margin-right: 10px;
+  line-height: 23px;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
   border: 1px solid #ccc;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #000;
-  line-height: 23px;
-  text-align: center;
-  cursor: pointer;
-  margin-right: 10px;
 }
 
 .draw-btn {
-  cursor: pointer;
   margin-left: 25px;
+  cursor: pointer;
 }
 
 .draw-btn:hover {
@@ -238,18 +238,18 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  line-height: 18px;
-  border: 1px solid #ccc;
-  vertical-align: middle;
   margin-left: 6px;
+  line-height: 18px;
   text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ccc;
 }
 
 .icon-dg {
   display: inline-block;
-  vertical-align: middle;
   width: 12px;
   height: 9px;
+  vertical-align: middle;
   background-image: url(../images/sprite-goods.png);
   background-position: -62px -75px;
 }
@@ -265,17 +265,17 @@
 }
 
 .label .ipt {
-  border: none;
   width: 54px;
   vertical-align: top;
+  border: none;
 }
 
 .in-l {
   display: inline-block;
-  vertical-align: middle;
   width: 10px;
-  border-bottom: 1px solid #ccc;
   margin: 0 2px;
+  vertical-align: middle;
+  border-bottom: 1px solid #ccc;
 }
 
 .gd-btn,
@@ -284,23 +284,23 @@
 }
 
 .gd-btn {
-  padding: 0 8px;
   height: 26px;
+  padding: 0 8px;
   line-height: 24px;
+  color: #555;
   text-align: center;
+  vertical-align: top;
+  cursor: pointer;
   background: #eee;
   border: 1px solid #ccc;
   border-radius: 3px;
-  color: #555;
-  vertical-align: top;
-  cursor: pointer;
 }
 
 .filiter .check-line .gd-btn {
   height: 22px;
+  margin-left: 5px;
   line-height: 22px;
   border-color: #e4e4e4;
-  margin-left: 5px;
 }
 
 /* 排序头 */
@@ -308,9 +308,9 @@
 .sort-nav {
   position: relative;
   z-index: 1;
-  background: #f1f1f1;
-  margin-bottom: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
+  background: #f1f1f1;
 }
 
 .sort-nav .nav-line {
@@ -330,36 +330,36 @@
 
 .sort-nav .pager {
   position: absolute;
-  width: 230px;
   right: 20px;
+  width: 230px;
   height: 26px;
-  line-height: 26px;
   font-size: 13px;
+  line-height: 26px;
   color: #666;
 }
 
 .sort-nav .normal span.cur {
-  background: #3287f1;
-  color: #fff;
-  border-color: #3287f1;
-  margin-right: -1px;
   z-index: 10;
+  margin-right: -1px;
+  color: #fff;
+  background: #3287f1;
+  border-color: #3287f1;
 }
 
 .sort-nav .normal span {
   position: relative;
   float: left;
   width: 50px;
-  text-align: center;
-  margin-left: -1px;
   height: 25px;
+  margin-left: -1px;
+  font-size: 13px;
   line-height: 23px;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
   border: 1px solid #ccc;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 13px;
-  color: #333;
-  cursor: pointer;
 }
 
 .sort-nav .normal span:first-child {
@@ -367,11 +367,11 @@
 }
 
 .sort-nav .normal span.cur {
-  background: #3287f1;
-  color: #fff;
-  border-color: #3287f1;
-  margin-right: -1px;
   z-index: 10;
+  margin-right: -1px;
+  color: #fff;
+  background: #3287f1;
+  border-color: #3287f1;
 }
 
 .label-wrap {
@@ -385,30 +385,30 @@
 
 .label-wrap .tag-ziying .icon {
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 6px;
   width: 14px;
   height: 14px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background-color: #fff;
   background-image: url(../images/sprite-goods.png);
   background-position: -94px -43px;
-  background-color: #fff;
 }
 
 .label-wrap .name {
+  display: inline-block;
   height: 24px;
   line-height: 24px;
-  display: inline-block;
-  vertical-align: middle;
   color: #666;
+  vertical-align: middle;
 }
 
 .sort-nav .pager {
   position: absolute;
-  width: 230px;
   right: 20px;
+  width: 230px;
   height: 26px;
-  line-height: 26px;
   font-size: 13px;
+  line-height: 26px;
   color: #666;
 }
 
@@ -424,31 +424,31 @@
 
 .sort-nav .pager .wrap {
   position: absolute;
-  right: 0;
   top: 0;
+  right: 0;
 }
 
 .sort-nav .pager .page-btn {
   float: left;
   height: 24px;
-  border: 1px solid #cacaca;
-  text-align: center;
-  line-height: 24px;
-  color: #cdcdcd;
-  font-size: 16px;
-  cursor: pointer;
   padding: 0 20px;
   font-family: 宋体;
+  font-size: 16px;
   font-weight: 700;
+  line-height: 24px;
+  color: #cdcdcd;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #cacaca;
 }
 
 /* 商品列表 */
 
 .goods-ul {
-  margin-right: -25px;
-  padding-top: 3px;
   position: relative;
   z-index: 0;
+  padding-top: 3px;
+  margin-right: -25px;
 }
 
 .goods-list li {
@@ -456,12 +456,12 @@
   float: left;
   width: 240px;
   height: 400px;
-  margin-bottom: 20px;
   padding: 12px;
+  margin-bottom: 20px;
   text-align: left;
+  background: #fff;
   border: 1px solid #f3f3f3;
   border-left: none;
-  background: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -470,25 +470,25 @@
   position: relative;
   /* 定位提高层级影子TODO: */
   z-index: 10;
+  border-right: none;
   -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, .1);
   box-shadow: 0 0 7px 2px rgba(0, 0, 0, .1);
-  border-right: none;
 }
 
 .goods-list .img-wrap {
   position: relative;
   display: block;
-  height: 214px;
   width: 214px;
+  height: 214px;
   line-height: 214px;
   text-align: center;
 }
 
 .goods-list .img-wrap img {
   display: inline-block;
-  vertical-align: middle;
   max-width: 100%;
   max-height: 100%;
+  vertical-align: middle;
 }
 
 .goods-ul .goods-title {
@@ -497,25 +497,25 @@
 }
 
 .goods-ul .price .fav-tags {
-  margin-left: 10px;
-  height: 18px;
-  line-height: 18px;
   left: 11px;
   display: inline-block;
-  background: #db1b1b;
-  color: #fff;
-  border-radius: 7%;
-  text-align: center;
-  font-size: 16px;
   width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+  background: #db1b1b;
+  border-radius: 7%;
 }
 
 .goods-ul .goods-title a {
   height: 40px;
-  line-height: 20px;
   overflow: hidden;
   font-size: 14px;
   font-weight: 700;
+  line-height: 20px;
   color: #6b6a6a;
 }
 
@@ -524,19 +524,19 @@
 }
 
 .goods-ul .price {
-  color: #db1b1b;
-  font-size: 18px;
   height: 18px;
-  line-height: 18px;
-  border-top: 1px solid #ededed;
   padding-top: 10px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #db1b1b;
+  border-top: 1px solid #ededed;
 }
 
 .goods-ul .price .asyn-price {
   display: inline-block;
-  vertical-align: top;
   height: 18px;
   line-height: 18px;
+  vertical-align: top;
 }
 
 .goods-ul .sell {
@@ -545,10 +545,10 @@
 }
 
 .goods-ul .sell .volume {
+  height: 12px;
   margin-top: 10px;
   margin-bottom: 10px;
   line-height: 12px;
-  height: 12px;
   color: #aaa;
 }
 
@@ -558,31 +558,31 @@
 }
 
 .goods-ul .sell .self-tag {
-  float: right;
   display: inline-block;
-  padding: 0;
-  overflow: hidden;
+  float: right;
   width: 52px;
   height: 14px;
+  padding: 0;
+  overflow: hidden;
   line-height: 12px;
   color: #ff7244;
-  border: 1px solid #ff7244;
   text-align: center;
+  border: 1px solid #ff7244;
   border-radius: 3px;
 }
 
 .goods-ul .sub-title {
   display: block;
+  width: 100%;
+  height: 14px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 14px;
   color: #4496f9;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  font-size: 14px;
-  height: 14px;
-  line-height: 14px;
-  margin-top: 8px;
-  margin-bottom: 12px;
 }
 
 /* 分页导航 */
@@ -593,96 +593,96 @@
 
 .pagination {
   display: inline-block;
-  margin-top: 0;
-  margin: 20px 0;
   height: 38px;
+  margin: 20px 0;
+  margin-top: 0;
 }
 
 .pagination .current {
   float: left;
-  padding: 0 14px;
+  width: 35px;
   height: 36px;
-  border: 1px solid #dadada;
+  height: 35px;
+  padding: 0 14px;
+  padding: 0;
+  margin-right: 1px;
+  margin-left: 3px;
   font-size: 16px;
   line-height: 36px;
-  text-align: center;
-  margin-right: 1px;
-  color: #8a8a8a;
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
   line-height: 35px;
-  border-radius: 3px;
-  padding: 0;
+  color: #8a8a8a;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #dadada;
   border-color: #eee;
-  margin-left: 3px;
+  border-radius: 3px;
 }
 
 .pagination .num,
 .pagination .next,
 .pagination .end {
   float: left;
-  padding: 0 14px;
+  width: 35px;
   height: 36px;
-  border: 1px solid #dadada;
+  height: 35px;
+  padding: 0 14px;
+  padding: 0;
+  margin-right: 1px;
+  margin-left: 3px;
   font-size: 16px;
   line-height: 36px;
-  text-align: center;
-  margin-right: 1px;
+  line-height: 35px;
   color: #8a8a8a;
+  text-align: center;
   cursor: pointer;
   background: #fff;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 3px;
-  padding: 0;
+  border: 1px solid #dadada;
   border-color: #eee;
-  margin-left: 3px;
+  border-radius: 3px;
 }
 
 .pagination .current,
 .pagination a:hover,
 .pagination span:hover {
-  background: #4496f9;
   color: #fff;
+  background: #4496f9;
 }
 
 /* 猜你想买 */
 
 .guess {
+  width: 1200px;
+  padding: 0 20px;
   background: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 1200px;
-  padding: 0 20px;
 }
 
 .guess h4 {
-  border-bottom: 1px solid #ededed;
   font-weight: 400;
+  border-bottom: 1px solid #ededed;
 }
 
 .guess .st {
-  display: inline-block;
   position: relative;
   bottom: -1px;
+  display: inline-block;
   font-size: 16px;
   line-height: 40px;
   border-bottom: 2px solid #3287f1;
 }
 
 .guess .guess-ul {
+  width: 1400px;
   padding: 20px 0;
   margin-left: -20px;
-  width: 1400px;
 }
 
 .guess .guess-ul .item {
   width: 200px;
-  border-left: 1px solid #ededed;
   padding: 0 15px;
   text-align: center;
+  border-left: 1px solid #ededed;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -691,34 +691,34 @@
   display: block;
   width: 164px;
   height: 164px;
-  line-height: 164px;
   margin: 0 auto 10px;
+  line-height: 164px;
 }
 
 .guess .guess-ul .title {
-  text-align: left;
-  color: #666;
-  line-height: 20px;
+  display: -webkit-box;
   height: 40px;
-  font-size: 12px;
   overflow: hidden;
-  word-wrap: break-word;
-  word-break: break-all;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666;
+  text-align: left;
   text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  display: -webkit-box;
 }
 
 .guess .guess-ul .price {
-  color: #db1b1b;
   font-size: 14px;
+  color: #db1b1b;
 }
 
 .guess .guess-ul .img-wrap img {
   display: inline-block;
-  vertical-align: middle;
   max-width: 100%;
   max-height: 100%;
   line-height: normal;
+  vertical-align: middle;
 }

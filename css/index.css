@@ -10,11 +10,11 @@
   width: 60px;
   height: 22px;
   line-height: 22px;
+  color: #aaa;
   text-align: center;
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 2px;
-  color: #aaa;
 }
 
 .chemical-right ul li h4 a {
@@ -22,7 +22,7 @@
 }
 
 .chemical-right ul li h4 a:hover {
-  color: #3287f1
+  color: #3287f1;
 }
 
 ul.list {
@@ -42,8 +42,8 @@ ul.list {
 }
 
 ul.list li:hover dl ul li {
-  display: block;
   z-index: 1200;
+  display: block;
 }
 
 .list>li>dl {
@@ -266,11 +266,11 @@ ul.list-content li .list-wrapper {
   width: 60px;
   height: 22px;
   line-height: 22px;
+  color: #aaa;
   text-align: center;
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 2px;
-  color: #aaa;
 }
 
 .seckill-content {
@@ -809,18 +809,18 @@ ul.list-content li .list-wrapper {
 
 .chemical-right .chemical-content em {
   display: inline-block;
-  text-align: center;
   width: 18px;
   height: 18px;
-  line-height: 18px;
   font-size: 16px;
+  line-height: 18px;
   color: #fff;
+  text-align: center;
   background: #db1b1b;
-  border-radius: 15%;
   -webkit-border-radius: 15%;
   -moz-border-radius: 15%;
   -ms-border-radius: 15%;
   -o-border-radius: 15%;
+  border-radius: 15%;
 }
 
 .chemical-detail a {
@@ -936,11 +936,11 @@ ul.list-content li .list-wrapper {
   width: 60px;
   height: 22px;
   line-height: 22px;
+  color: #aaa;
   text-align: center;
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 2px;
-  color: #aaa;
 }
 
 .right .title>a:hover,
@@ -1392,8 +1392,8 @@ a.see-more:hover {
 }
 
 .knowledge .head .more {
-  right: 20px;
   top: 15px;
+  right: 20px;
 }
 
 /* 商家入驻 */
@@ -1937,18 +1937,18 @@ footer .auth-img a img {
 
 .login-content .login-head {
   padding: 30px 0 20px 40px;
-  border-bottom: 1px solid #eee;
   background-image: url(../images/sprite2.png);
   background-position: -375px 0px;
+  border-bottom: 1px solid #eee;
 }
 
 .login-content .login-head .avtar {
+  float: left;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  background-color: #f5f5f5;
   overflow: hidden;
-  float: left;
+  background-color: #f5f5f5;
+  border-radius: 50%;
 }
 
 .login-content .login-head>p {
@@ -1957,14 +1957,14 @@ footer .auth-img a img {
 
 .login-content .login-head>p span:nth-child(2) {
   display: block;
-  color: #999;
   line-height: 22px;
+  color: #999;
 }
 
 .login-content .login-head>p span:nth-child(1) {
   display: block;
-  color: #333;
   line-height: 22px;
+  color: #333;
 }
 
 .login-content .login-head .avtar img {
@@ -1973,20 +1973,20 @@ footer .auth-img a img {
 }
 
 .login-content .login-state {
-  padding: 5px 0;
   height: 40px;
-  border-bottom: 1px solid #eee;
+  padding: 5px 0;
   background: #fafafa;
+  border-bottom: 1px solid #eee;
 }
 
 .login-content .login-state a {
   float: left;
-  height: 40px;
-  line-height: 40px;
   width: 116px;
-  text-align: center;
-  color: #333;
+  height: 40px;
   font-weight: 700;
+  line-height: 40px;
+  color: #333;
+  text-align: center;
 }
 
 /*.login-content .login-state a:hover {
@@ -1994,10 +1994,10 @@ footer .auth-img a img {
 }*/
 
 .login-content .login-state a>span {
-  text-align: center;
   /*color: #333;
 */
   font-weight: 700;
+  text-align: center;
 }
 
 .login-content .login-state a:nth-child(1) {
@@ -2013,13 +2013,13 @@ footer .auth-img a img {
 }
 
 .login-content .login-state i {
+  display: inline-block;
   width: 16px;
   height: 16px;
-  display: inline-block;
-  vertical-align: middle;
-  background-image: url(../images/sprite2.png);
   margin-top: -3px;
   margin-right: 5px;
+  vertical-align: middle;
+  background-image: url(../images/sprite2.png);
 }
 
 .login-content .login-state i.i-login {
@@ -2038,9 +2038,9 @@ footer .auth-img a img {
 .login-content .login-bottom a {
   float: left;
   width: 72px;
-  border-right: 1px solid #eee;
   padding-left: 5px;
   text-align: center;
+  border-right: 1px solid #eee;
 }
 
 .login-content .login-bottom a:hover i {
@@ -2056,14 +2056,14 @@ footer .auth-img a img {
 }
 
 .login-content .login-bottom a:hover span {
-  color: #4496f9
+  color: #4496f9;
 }
 
 .login-content .login-bottom a i {
   display: block;
+  margin: -8px 0 8px;
   font-size: 35px;
   color: #4496f9;
-  margin: -8px 0 8px;
 }
 
 .login-content .login-bottom .login-footer-1 {
@@ -2074,6 +2074,6 @@ footer .auth-img a img {
 
 .login-content .login-bottom .login-footer-2 {
   display: block;
-  color: #999;
   padding-left: 5px;
+  color: #999;
 }

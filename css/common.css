@@ -1,7 +1,5 @@
 /* 共用头部 */
 
-
-
 /* 用户头部 */
 
 .top {
@@ -12,19 +10,19 @@
 }
 
 .top-r ul li {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   /* border-right: 1px solid black */
 }
 
 .top-r .links {
-  display: none;
   position: absolute;
-  z-index: 40;
-  padding: 13px 0;
-  width: 200px;
-  left: -9px;
   top: 34px;
+  left: -9px;
+  z-index: 40;
+  display: none;
+  width: 200px;
+  padding: 13px 0;
   background: #fff;
   border: 1px solid #ddd;
   box-shadow: -1px 0 3px #f1f1f1;
@@ -39,7 +37,6 @@
   border-color: #ddd;
   box-shadow: -1px 0 3px #f1f1f1;
   /* z-index: 99999900; */
-
 }
 
 .top-r .links a:hover {
@@ -105,16 +102,16 @@ span.spacer {
 
 .nav-cart-wrap {
   position: absolute;
+  top: 35px;
+  right: 0;
+  z-index: 1002;
   display: none;
   width: 278px;
-  border: 1px solid #ddd;
-  right: 0;
-  top: 35px;
-  background: #fff;
-  text-indent: 0;
-  z-index: 1002;
   max-height: 475px;
   overflow-y: auto;
+  text-indent: 0;
+  background: #fff;
+  border: 1px solid #ddd;
 }
 
 .nav-cart-wrap .empty {
@@ -127,12 +124,12 @@ span.spacer {
 }
 
 .nav-cart-wrap .tips {
-  padding: 25px 0;
   height: 20px;
+  padding: 25px 0;
+  font-size: 13px;
   line-height: 20px;
   color: #8c8c8c;
   text-align: center;
-  font-size: 13px;
 }
 
 .header .nav-cart-wrap .shopping {
@@ -144,14 +141,14 @@ header .cart:hover .info-wrap {
 }
 
 .info-wrap {
+  position: relative;
+  z-index: 1024;
   display: block;
   height: 34px;
   line-height: 34px;
-  position: relative;
-  z-index: 1024;
+  color: #aaa;
   background: #fff;
   border: 1px solid #ddd;
-  color: #aaa;
 }
 
 header .cart:hover .nav-cart-wrap {
@@ -342,7 +339,6 @@ nav ul li a:hover {
   border-bottom: 2px solid #287adf;
   content: "";
 }
-
 
 /* 底部 */
 
@@ -725,18 +721,18 @@ footer .auth-img a img {
 
 .login-content .login-head {
   padding: 30px 0 20px 40px;
-  border-bottom: 1px solid #eee;
   background-image: url(../images/sprite2.png);
   background-position: -375px 0px;
+  border-bottom: 1px solid #eee;
 }
 
 .login-content .login-head .avtar {
+  float: left;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  background-color: #f5f5f5;
   overflow: hidden;
-  float: left;
+  background-color: #f5f5f5;
+  border-radius: 50%;
 }
 
 .login-content .login-head>p {
@@ -745,14 +741,14 @@ footer .auth-img a img {
 
 .login-content .login-head>p span:nth-child(2) {
   display: block;
-  color: #999;
   line-height: 22px;
+  color: #999;
 }
 
 .login-content .login-head>p span:nth-child(1) {
   display: block;
-  color: #333;
   line-height: 22px;
+  color: #333;
 }
 
 .login-content .login-head .avtar img {
@@ -761,20 +757,20 @@ footer .auth-img a img {
 }
 
 .login-content .login-state {
-  padding: 5px 0;
   height: 40px;
-  border-bottom: 1px solid #eee;
+  padding: 5px 0;
   background: #fafafa;
+  border-bottom: 1px solid #eee;
 }
 
 .login-content .login-state a {
   float: left;
-  height: 40px;
-  line-height: 40px;
   width: 116px;
-  text-align: center;
-  color: #333;
+  height: 40px;
   font-weight: 700;
+  line-height: 40px;
+  color: #333;
+  text-align: center;
 }
 
 /*.login-content .login-state a:hover {
@@ -782,10 +778,10 @@ footer .auth-img a img {
 }*/
 
 .login-content .login-state a>span {
-  text-align: center;
   /*color: #333;
 */
   font-weight: 700;
+  text-align: center;
 }
 
 .login-content .login-state a:nth-child(1) {
@@ -801,13 +797,13 @@ footer .auth-img a img {
 }
 
 .login-content .login-state i {
+  display: inline-block;
   width: 16px;
   height: 16px;
-  display: inline-block;
-  vertical-align: middle;
-  background-image: url(../images/sprite2.png);
   margin-top: -3px;
   margin-right: 5px;
+  vertical-align: middle;
+  background-image: url(../images/sprite2.png);
 }
 
 .login-content .login-state i.i-login {
@@ -826,9 +822,9 @@ footer .auth-img a img {
 .login-content .login-bottom a {
   float: left;
   width: 72px;
-  border-right: 1px solid #eee;
   padding-left: 5px;
   text-align: center;
+  border-right: 1px solid #eee;
 }
 
 .login-content .login-bottom a:hover i {
@@ -844,14 +840,14 @@ footer .auth-img a img {
 }
 
 .login-content .login-bottom a:hover span {
-  color: #4496f9
+  color: #4496f9;
 }
 
 .login-content .login-bottom a i {
   display: block;
+  margin: -8px 0 8px;
   font-size: 35px;
   color: #4496f9;
-  margin: -8px 0 8px;
 }
 
 .login-content .login-bottom .login-footer-1 {
@@ -862,6 +858,6 @@ footer .auth-img a img {
 
 .login-content .login-bottom .login-footer-2 {
   display: block;
-  color: #999;
   padding-left: 5px;
+  color: #999;
 }

@@ -1,6 +1,7 @@
 .wrapper {
   width: 1190px;
   margin: 0 auto;
+  position: relative;
 }
 
 .nav {
@@ -17,8 +18,11 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+.seen {
+  // margin-left: 400px;
+}
 .guess h4 {
+  width: 400px;
   font-weight: 400;
   border-bottom: 1px solid #ededed;
 }
@@ -533,6 +537,85 @@
     em {
       color:  #ff7422;
     }
+    }
+  }
+}
+.rel-goods {
+  margin-top: 20px;
+  background: #fff;
+  float:left;
+  width:200px;
+  padding:0 10px;
+  h4{
+    width: 400px;
+    height: 39px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    span{
+      margin-top: -1px;
+      display: inline-block;
+      line-height: 39px;
+      border-bottom: 2px solid #3287f1;
+      color: #333;
+      font-size: 16px;
+    }
+  }
+  ul li {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+    text-align: center;
+    a:nth-child(2) {
+      display: block;
+    font-size: 12px;
+    line-height: 20px;
+    max-height: 38px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    }
+    p {
+      font-size: 14px;
+      line-height: 28px;
+      color: #db1b1b;
+    }
+    img {
+      display: block;
+      margin: 15px auto;
+      max-width: 140px;
+      max-height: 140px;
+    }
+  }
+}
+.goods-details {
+  margin-top: 20px;
+  width: 910px;
+  float: right;
+  background: #fff;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  h4{
+    width: 400px;
+    height: 39px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    span{
+      margin-top: -1px;
+      display: inline-block;
+      line-height: 39px;
+      border-bottom: 2px solid #3287f1;
+      color: #333;
+      font-size: 16px;
+    }
+  }
+  .details {
+    .p50 {
+      width:50%;
+    }
+    .p25 {
+      width: 25%;
     }
   }
 }

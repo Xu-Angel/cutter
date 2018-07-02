@@ -1,6 +1,7 @@
 .wrapper {
   width: 1190px;
   margin: 0 auto;
+  position: relative;
 }
 .nav {
   position: relative;
@@ -15,6 +16,7 @@
   box-sizing: border-box;
 }
 .guess h4 {
+  width: 400px;
   font-weight: 400;
   border-bottom: 1px solid #ededed;
 }
@@ -508,4 +510,81 @@
 }
 .info-right .info-detail .marks .pay em {
   color: #ff7422;
+}
+.rel-goods {
+  margin-top: 20px;
+  background: #fff;
+  float: left;
+  width: 200px;
+  padding: 0 10px;
+}
+.rel-goods h4 {
+  width: 400px;
+  height: 39px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+.rel-goods h4 span {
+  margin-top: -1px;
+  display: inline-block;
+  line-height: 39px;
+  border-bottom: 2px solid #3287f1;
+  color: #333;
+  font-size: 16px;
+}
+.rel-goods ul li {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #eee;
+  text-align: center;
+}
+.rel-goods ul li a:nth-child(2) {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  max-height: 38px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+}
+.rel-goods ul li p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #db1b1b;
+}
+.rel-goods ul li img {
+  display: block;
+  margin: 15px auto;
+  max-width: 140px;
+  max-height: 140px;
+}
+.goods-details {
+  margin-top: 20px;
+  width: 910px;
+  float: right;
+  background: #fff;
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+.goods-details h4 {
+  width: 400px;
+  height: 39px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+.goods-details h4 span {
+  margin-top: -1px;
+  display: inline-block;
+  line-height: 39px;
+  border-bottom: 2px solid #3287f1;
+  color: #333;
+  font-size: 16px;
+}
+.goods-details .details .p50 {
+  width: 50%;
+}
+.goods-details .details .p25 {
+  width: 25%;
 }

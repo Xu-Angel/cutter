@@ -100,7 +100,27 @@ function carousel(container, arrowContainer, pointStyle, time, speed) {
         right.onclick = rightPlay;
     }
 
-
+	/*
+	 * 监听 visibility change 事件
+	 ==================================*/
+     let pageVisibility = document.visibilityState;	
+     const tmpTitle = document.title
+     document.addEventListener('visibilitychange', function() {
+       // 页面变为不可见时触发
+       if (document.visibilityState == 'hidden') {
+           document.title =document.title + 'bye';
+           clearInterval(container.timer);
+       }
+     
+       // 页面变为可见时触发
+       if (document.visibilityState == 'visible') { 
+                   document.title = tmpTitle;
+                   clearInterval(container.timer);
+                   container.timer = setInterval(rightPlay, time);
+       }
+     });
+ 
+ 
 
     /*
     * 自动轮播函数

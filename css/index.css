@@ -30,6 +30,7 @@ ul.list {
   width: 212px;
   height: 400px;
   background: rgba(27, 35, 45, .8);
+  z-index: 20;
 }
 
 .list>li:hover {
@@ -253,6 +254,7 @@ ul.list-content li .list-wrapper {
   position: absolute;
   left: 50%;
   bottom: 5px;
+  z-index: 50;
 }
 .carousel ul.doc li {
   display: inline-block;
@@ -1956,23 +1958,34 @@ footer .auth-img a img {
 
 .login {
   position: relative;
-  z-index: 999;
+  z-index: 20;
 }
 
 .login-wrapper {
   position: absolute;
-  top: 200px;
+  top: 185px;
   right: 10%;
   width: 250px;
   height: 320px;
   background: #fff;
   /*opacity: .4;*/
 }
-
+.login-wrapper .border {
+  width: 270px;
+    height: 340px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background: #fff;
+    opacity: .4;
+}
 .login-wrapper .login-content {
   width: 234px;
-  height: 304px;
-  background: #fff;
+    height: 304px;
+    background: #fff;
+    position: absolute;
+    right: 8px;
+    top: 8px;
 }
 
 .login-content .login-head {

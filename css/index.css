@@ -1478,6 +1478,7 @@ a.see-more:hover {
 
 .news .slider {
   position: relative;
+ 
 }
 
 .news .slider i {
@@ -1497,11 +1498,15 @@ a.see-more:hover {
   position: relative;
   float: left;
   width: 1062px;
-  margin: 0 50px;
+  margin: 0 50px 0 77px;
 }
-
+.news .content {
+  height:175px;
+  overflow: hidden;
+}
 .news .content ul {
-  width: 4684px;
+  /* width: 4684px; */
+  position: absolute;
 }
 
 .content .info {

@@ -166,4 +166,7 @@ function seckillTime(time, el) {
 
 /*楼层跳跃 */
 /*媒体报道轮播 */
-
+const conNews = document.querySelector('.news .content')
+const arrowCon = document.querySelector('.news .arrow-i')
+console.log(conNews, arrowCon)
+carousel(conNews, arrowCon, undefined, 3000, 10);

@@ -70,7 +70,9 @@ function carousel(container, arrowContainer, pointStyle, time, speed) {
             index = 1;
         }
         caranimate(ul, -index * container.offsetWidth, speed);
-        pointStyle == undefined ? '' : light();
+        if ( pointStyle === !undefined ) {
+            light();
+        }
     }
 
     /*
@@ -84,7 +86,10 @@ function carousel(container, arrowContainer, pointStyle, time, speed) {
             index = liS.length - 2;
         }
         caranimate(ul, -index * container.offsetWidth, speed);
-        light();
+        if ( pointStyle === !undefined ) {
+            light();
+        }
+        
     }
 
     /*判断是否需要左右箭头*/

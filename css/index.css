@@ -1570,19 +1570,24 @@ a.see-more:hover {
 .advertise .content {
   position: relative;
   width: 1090px;
+  height: 80px;
   margin: 30px 27px auto;
   overflow: hidden;
 }
-
+.advertise .content ul{
+  position: absolute;
+}
 .advertise .content ul li {
-  position: relative;
   float: left;
-  width: 272px;
+  /* width: 272px; */
   height: 64px;
 }
-
+.advertise .content ul li a {
+  float:left;
+  margin:0 33px;
+}
 .advertise .content ul li img {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   right: 0;
   bottom: 0;

@@ -5,13 +5,14 @@ const tohead = document.querySelector('.to-head');
 BackTop(backTop)
 
 function BackTop(el) {
-  window.onscroll = function() {
+  function backFlag() {
     if (scroll().top > 100) {
       el.style.display = 'block'
     } else {
       el.style.display = 'none'
     }
   }
+  window.addEventListener('scroll',backFlag)
   //返回
   window.onload = function() {
     (el.onclick = function back() {
@@ -36,7 +37,7 @@ tohead.onclick = function back() {
 }
 /* 广告轮播 */
 const con = document.querySelector('.advertise .content');
-carousel(con, undefined, undefined, 3000, 10);
+carousel(con,3000, 10);
 /* banner轮播 */
 const imgArr = document.querySelectorAll('.carousel .img li')
 const docArr = document.querySelectorAll('.carousel .doc li')
@@ -205,7 +206,7 @@ window.onscroll = function() {
   if (scroll().top>Yseckill-200) {
     leftFloor.style.display = 'block'
     const leftDis = document.querySelector('.seckill .wrapper').offsetLeft
-  console.log(leftDis)
+ // console.log(leftDis)
   leftFloor.style.left = leftDis -80 + 'px'
   } else {
     leftFloor.style.display = 'none'
@@ -227,6 +228,7 @@ let clickArr = floorArr.slice(0, 10)
 
 function floorClick() {
   let parent = this.parentNode;
+  console.log(parent)
   parent.isclick = true;
   //样式
   for (let i = 0, len = clickArr.length; i < len; i++) {
@@ -238,7 +240,7 @@ function floorClick() {
   clearInterval(window.timer)
   window.timer = setInterval(function callBack() {
     //parent.isclick = false;
-    console.log(dis, 'to', scroll().top)
+    //console.log(dis, 'to', scroll().top)
     let step = (dis - scroll().top) / 10
     window.scrollTo(0, scroll().top + step)
     if (Math.abs(scroll().top - dis) < 10) {
@@ -257,4 +259,4 @@ for (let i = 0, len = clickArr.length; i < len; i++) {
 /*媒体报道轮播 */
 const conNews = document.querySelector('.news .content')
 const arrowCon = document.querySelector('.news .arrow-i')
-carousel(conNews, arrowCon, undefined, 3000, 10);
+carousel(conNews, 3000, 10,arrowCon);

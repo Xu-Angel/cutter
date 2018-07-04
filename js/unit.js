@@ -1,6 +1,160 @@
 /*
  * 2018.01.08
  * author：Angel*/
+/*
+* 轮播结构                          CSS：container-->> position:relative; 
+                                                     overflow:hidden;
+<div class="container">                图片Ul----->> position：absolute;    
+    <ul class="img">                                width：自动生成
+        <li><img src="";></li>         图片li----->>float:left;
+    </ul>                            
+    <ul class="point">
+    </ul>
+    <ul class="arrow">
+        <li class="left"><</li>
+        <li class="right">></li>
+    </ul>
+</div>
+ */
+/**
+ * 
+ * @param {*} container div>carouse.div/ul>
+ * @param {*} time 切换一张图片的时间 
+ * @param {*} speed 移速
+ * @param {*} arrowContainer 箭头容器
+ * @param {*} pointStyle 圆点活动样式的类名
+ */
+function carousel(container, time, speed, arrowContainer, pointStyle, ) {
+  var ul = container.children[0]; //图片ul
+  var index = 0; //记录图片索引
+  var newLi = ul.children[0].cloneNode(true); //在最后一幅图后面添加第一幅图 形成无缝轮播
+  ul.appendChild(newLi);
+  var liS = ul.children; //所有图片的集合
+  ul.style.width = liS.length * 100 + '%'; //图片总宽度
+  /*判断是否需要圆点*/
+  if (pointStyle) {
+    var point = container.children[1]; //小圆点ul
+    //根据图片数量生成小圆点，初始化轮播圆点状态
+    for (var i = 1; i < liS.length; i++) {
+      var li = document.createElement('li');
+      li.innerHTML = i;
+      point.appendChild(li);
+    }
+    var points = point.children;
+    light();
+    /*
+     * 圆点点击更换图片
+     */
+    for (var j = 0; j < points.length; j++) {
+      points[j].index = j;
+      points[j].onclick = function() {
+        index = this.index;
+        leftAnimate(ul, -index * container.offsetWidth, speed);
+        light();
+      };
+    }
+
+    /*
+     * 圆点样式改变函数
+     */
+    function light() {
+      for (var i = 0; i < points.length; i++) {
+        points[i].className = "";
+      }
+      index > (points.length - 1) ? points[0].className = pointStyle : points[index].className = pointStyle;
+    }
+  }
+
+  /*
+   * 右键头函数
+   */
+
+  function rightPlay() {
+    index++;
+    if (index > liS.length - 1) {
+      ul.style.left = 0;
+      index = 1;
+    }
+    leftAnimate(ul, -index * container.offsetWidth, speed);
+    if (pointStyle) {
+      light();
+    }
+  }
+
+  /*
+   * 左键头函数
+   */
+
+  function leftPlay() {
+    index--;
+    if (index < 0) {
+      ul.style.left = -(liS.length - 1) * container.offsetWidth + "px";
+      index = liS.length - 2;
+    }
+    leftAnimate(ul, -index * container.offsetWidth, speed);
+    if (pointStyle) {
+      light();
+    }
+  }
+
+  /*判断是否需要左右箭头*/
+  if (arrowContainer) {
+    var left = arrowContainer.children[0]; //左箭头
+    var right = arrowContainer.children[1]; //右箭头
+    left.onclick = leftPlay;
+    right.onclick = rightPlay;
+  }
+
+  /*
+   * 监听 visibility change 事件
+  */
+  const tmpTitle = document.title
+  document.addEventListener('visibilitychange', function() {
+    // 页面变为不可见时触发
+    if (document.visibilityState == 'hidden') {
+      document.title = document.title + 'bye';
+      clearInterval(container.timer);
+    }
+    if (document.visibilityState == 'visible') {
+      document.title = tmpTitle;
+      clearInterval(container.timer);
+      container.timer = setInterval(rightPlay, time);
+    }
+  });
+
+  /*
+   * 自动轮播函数
+   */
+  container.timer = setInterval(rightPlay, time);
+  container.onmouseover = function() {
+    clearInterval(container.timer);
+  };
+  container.onmouseout = function() {
+    clearInterval(container.timer);
+    container.timer = setInterval(rightPlay, time);
+  };
+}
+
+/*
+ * @水平动画函数
+ * @运动对象，obj
+ * @运动目标位置，target
+ * @运动速度,speed
+ *
+ */
+function leftAnimate(obj, target, sp) {
+  clearInterval(obj.timer);
+  obj.timer = setInterval(function() {
+    var speeds = (obj.offsetLeft > target ? -sp : sp);
+    if (Math.abs(obj.offsetLeft - target) < sp) {
+      obj.style.left = target + "px";
+      clearInterval(obj.timer);
+    } else {
+      obj.style.left = obj.offsetLeft + speeds + "px";
+    }
+  }, 0)
+
+}
 
 /**
  * 获取滚动条距离顶部和左侧的距离，兼容IE6+,Firefox,Chrome等
@@ -127,7 +281,9 @@ function addEvent(obj, event, fn) {
 
 
 
-/*=========兼容getElementsByClassName==========*/
+/*
+兼容getElementsByClassName
+*/
 document.getElementsByClassName =
   document.getElementsByClassName ?
   document.getElementsByClassName : getByClassName;
@@ -231,7 +387,7 @@ function removeClass(el, className) {
 
   el.className = arr.join(' ');
 }
-/*=========兼容getElementsByClassName  end==========*/
+
 /**
  * 返回(0,1)之间的随机数
  * @returns {number}
@@ -240,12 +396,3 @@ function random() {
   return Math.random();
 }
 
-/**
- * 返回[0, val)整数的随机数
- * @param val           返回的最大整数值
- * @returns {number}
- */
-function next(val) {
-  val = val == undefined ? 100 : val;
-  return Math.floor(Math.random() * val);
-}

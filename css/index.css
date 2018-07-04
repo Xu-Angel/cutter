@@ -1916,6 +1916,7 @@ footer .auth-img a img {
 .left-floor {
   position: fixed;
   left: 0%;
+  top:20%;
   z-index: 600;
   font-size: 12px;
   -webkit-transition: opacity .5s;
@@ -1937,12 +1938,18 @@ footer .auth-img a img {
   color: #fff;
   background-color: #4496f9;
   transition: background-color .1s;
+  -webkit-transition: background-color .1s;
+  -moz-transition: background-color .1s;
+  -ms-transition: background-color .1s;
+  -o-transition: background-color .1s;
 }
 
 .left-floor ul li a span:hover {
   color: #fff;
 }
-
+.left-floor ul li.on a span{
+  color:#fff;
+}
 .left-floor ul li a {
   display: block;
   width: 24px;

@@ -69,7 +69,6 @@ function animation(obj, target, callback) {
         c = Math.round(c * 100);
         // 如果传值取整是0，表示参数是小数需要*100，否则取数字本身
         t = parseInt(t) == 0 || parseInt(t) == 1 ? t * 100 : t;
-        console.log(t)
       } else {
         c = parseInt(c); // 去除返回的单位
       }

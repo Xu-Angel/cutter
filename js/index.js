@@ -139,10 +139,10 @@ function seckillTime(time, el) {
       seconds
     }
   }
-/**
- * 
- * @param {type:Number} val  units digit to tens digit
- */
+  /**
+   * 
+   * @param {type:Number} val  units digit to tens digit
+   */
   function convert(val) {
     return val >= 10 ? val : '0' + val
   }
@@ -155,8 +155,11 @@ function seckillTime(time, el) {
   }
   show()
   const timer = setInterval(function() {
-    if (Time().seconds === 0) {
-        console.log('bye')
+    let zero = 0
+    for (let key in Time()) {
+      zero += Time()[key]
+    }
+    if (zero === 0) {
       clearInterval(timer)
     }
     show()
@@ -165,8 +168,93 @@ function seckillTime(time, el) {
 /*选项卡切换 */
 
 /*楼层跳跃 */
+
+const Yseckill = document.querySelector('.seckill').offsetTop
+const YchemicalDay = document.querySelectorAll('.chemical')[0].offsetTop
+const YchemicalAgr = document.querySelectorAll('.chemical')[1].offsetTop
+const YchemicalOil = document.querySelectorAll('.chemical')[2].offsetTop
+const YmarketInfo = document.querySelector('.market-info').offsetTop
+const YpayDynamic = document.querySelector('.pay-dynamic').offsetTop
+const YtodyPrice = document.querySelector('.knowledge').offsetTop
+const YbuyKonwlegde = document.querySelector('.supply').offsetTop
+const YkeywaFinance = document.querySelector('.keywa-finance').offsetTop
+const Ynews = document.querySelector('.news').offsetTop
+console.log(Ynews)
+const Yadv = document.querySelector('.advertise').offsetTop;
+//调整left-floor的 视距
+const leftFloor = document.querySelector('.left-floor');
+window.onresize = function () {
+  const leftDis = document.querySelector('.seckill .wrapper').offsetLeft
+  console.log(leftDis)
+  leftFloor.style.left = leftDis -80 + 'px'
+  if (leftDis < 80) {
+    leftFloor.style.left = 0
+  }
+}
+//楼层模块列表
+let YArr = [
+  Yseckill, YchemicalDay, YchemicalAgr, YchemicalOil, YmarketInfo, YpayDynamic, YtodyPrice, YbuyKonwlegde, YkeywaFinance, Ynews, Yadv
+]
+const Ywindow = window.innerHeight / 2
+//楼层灯泡列表
+let floorArr = Array.from(document.querySelectorAll('.left-floor ul li'))
+// floorArr = floorArr.slice(0,10)
+const par = document.querySelector('.left-floor ul')
+//滚动监听
+window.onscroll = function() {
+  if (scroll().top>Yseckill-200) {
+    leftFloor.style.display = 'block'
+    const leftDis = document.querySelector('.seckill .wrapper').offsetLeft
+  console.log(leftDis)
+  leftFloor.style.left = leftDis -80 + 'px'
+  } else {
+    leftFloor.style.display = 'none'
+  }
+  //如果滚动到楼层+可视窗一半--->>激活该楼层小灯泡
+  if (!par.isclick) {
+    console.log('scroll 自己触发')
+    for (let i = 0, len = floorArr.length; i < len; i++) {
+      if (scroll().top + Ywindow > YArr[i]) {
+        for (let i = 0, len = floorArr.length; i < len; i++) {
+          floorArr[i].className = ''
+        }
+        floorArr[i].className = 'on'
+      }
+    }
+  }
+}
+let clickArr = floorArr.slice(0, 10)
+
+function floorClick() {
+  let parent = this.parentNode;
+  parent.isclick = true;
+  //样式
+  for (let i = 0, len = clickArr.length; i < len; i++) {
+    clickArr[i].className = ''
+  }
+  this.className = 'on'
+  //动作
+  const dis = YArr[this.index]
+  clearInterval(window.timer)
+  window.timer = setInterval(function callBack() {
+    //parent.isclick = false;
+    console.log(dis, 'to', scroll().top)
+    let step = (dis - scroll().top) / 10
+    window.scrollTo(0, scroll().top + step)
+    if (Math.abs(scroll().top - dis) < 10) {
+      window.scrollTo(0, dis)
+      clearInterval(window.timer)
+      parent.isclick = false;
+    }
+  }, 20)
+}
+
+for (let i = 0, len = clickArr.length; i < len; i++) {
+  clickArr[i].index = i
+  clickArr[i].addEventListener('click', floorClick)
+}
+
 /*媒体报道轮播 */
 const conNews = document.querySelector('.news .content')
 const arrowCon = document.querySelector('.news .arrow-i')
-console.log(conNews, arrowCon)
 carousel(conNews, arrowCon, undefined, 3000, 10);

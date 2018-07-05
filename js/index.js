@@ -198,7 +198,10 @@ let YArr = [
 ]
 const Ywindow = window.innerHeight / 2
 //楼层灯泡列表
-let floorArr = Array.from(document.querySelectorAll('.left-floor ul li'))
+//let floorArr = Array.from(document.querySelectorAll('.left-floor ul li'))
+//使用...展开运算符对类数组进行转换
+let floorArr = [...document.querySelectorAll('.left-floor ul li')]
+console.log(floorArr);
 // floorArr = floorArr.slice(0,10)
 const par = document.querySelector('.left-floor ul')
 //滚动监听

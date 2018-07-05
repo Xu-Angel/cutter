@@ -12,7 +12,7 @@ function BackTop(el) {
       el.style.display = 'none'
     }
   }
-  window.addEventListener('scroll',backFlag)
+  window.addEventListener('scroll', backFlag)
   //返回
   window.onload = function() {
     (el.onclick = function back() {
@@ -37,7 +37,7 @@ tohead.onclick = function back() {
 }
 /* 广告轮播 */
 const con = document.querySelector('.advertise .content');
-carousel(con,3000, 10);
+carousel(con, 3000, 10);
 /* banner轮播 */
 const imgArr = document.querySelectorAll('.carousel .img li')
 const docArr = document.querySelectorAll('.carousel .doc li')
@@ -184,10 +184,10 @@ console.log(Ynews)
 const Yadv = document.querySelector('.advertise').offsetTop;
 //调整left-floor的 视距
 const leftFloor = document.querySelector('.left-floor');
-window.onresize = function () {
+window.onresize = function() {
   const leftDis = document.querySelector('.seckill .wrapper').offsetLeft
   console.log(leftDis)
-  leftFloor.style.left = leftDis -80 + 'px'
+  leftFloor.style.left = leftDis - 80 + 'px'
   if (leftDis < 80) {
     leftFloor.style.left = 0
   }
@@ -203,17 +203,21 @@ let floorArr = Array.from(document.querySelectorAll('.left-floor ul li'))
 const par = document.querySelector('.left-floor ul')
 //滚动监听
 window.onscroll = function() {
-  if (scroll().top>Yseckill-200) {
+  if (scroll().top > Yseckill - 200) {
     leftFloor.style.display = 'block'
     const leftDis = document.querySelector('.seckill .wrapper').offsetLeft
- // console.log(leftDis)
-  leftFloor.style.left = leftDis -80 + 'px'
+    leftFloor.style.left = leftDis - 80 + 'px'
   } else {
     leftFloor.style.display = 'none'
   }
   //如果滚动到楼层+可视窗一半--->>激活该楼层小灯泡
+  console.log(!par.isclick)
   if (!par.isclick) {
-    console.log('scroll 自己触发')
+    console.log('onscroll 可自己触发了')
+    if (scroll().top === dis) {
+      console.log('刚做完click 事件 已经相等啦');
+      return
+    }
     for (let i = 0, len = floorArr.length; i < len; i++) {
       if (scroll().top + Ywindow > YArr[i]) {
         for (let i = 0, len = floorArr.length; i < len; i++) {
@@ -224,7 +228,8 @@ window.onscroll = function() {
     }
   }
 }
-let clickArr = floorArr.slice(0, 10)
+let clickArr = floorArr.slice(0, 10),
+    dis = 0
 
 function floorClick() {
   let parent = this.parentNode;
@@ -236,13 +241,13 @@ function floorClick() {
   }
   this.className = 'on'
   //动作
-  const dis = YArr[this.index]
+  dis = YArr[this.index]
   clearInterval(window.timer)
   window.timer = setInterval(function callBack() {
-    //parent.isclick = false;
-    //console.log(dis, 'to', scroll().top)
     let step = (dis - scroll().top) / 10
+    step = step > 0 ? Math.ceil(step) : Math.floor(step);
     window.scrollTo(0, scroll().top + step)
+    //10px以内瞬息到目的地，吸附效果
     if (Math.abs(scroll().top - dis) < 10) {
       window.scrollTo(0, dis)
       clearInterval(window.timer)
@@ -259,4 +264,4 @@ for (let i = 0, len = clickArr.length; i < len; i++) {
 /*媒体报道轮播 */
 const conNews = document.querySelector('.news .content')
 const arrowCon = document.querySelector('.news .arrow-i')
-carousel(conNews, 3000, 10,arrowCon);
+carousel(conNews, 3000, 10, arrowCon);

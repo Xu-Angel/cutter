@@ -24,7 +24,7 @@
  * @param {*} arrowContainer 箭头容器
  * @param {*} pointStyle 圆点活动样式的类名
  */
-function carousel(container, time, speed, arrowContainer, pointStyle, ) {
+function carousel(container, time, speed, arrowContainer, pointStyle) {
   var ul = container.children[0]; //图片ul
   var index = 0; //记录图片索引
   var newLi = ul.children[0].cloneNode(true); //在最后一幅图后面添加第一幅图 形成无缝轮播
